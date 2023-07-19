@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
 
 \title{Discrete Math}
 \author{andriel vinicius}
@@ -53,6 +54,70 @@ Mas o que se tem hoje em dia? Bem, os matemáticos utilizam o sistema axiomátic
 \subsection{Matemática Discreta}
 "Tá, mas onde você quis chegar com toda essa introdução e contextualização? Cadê a matemática discreta?". Bem, aqui estamos: a matemática discreta é uma área da matemática que trata acerca das \textbf{estruturas matemáticas que são finitas e/ou podem ser enumeradas}; um bom exemplo disso são os números naturais. Ela apresenta métodos de resolução diversos e utiliza constantemente do \emph{raciocínio matemático}.
 
-\section{To be Continued ...}
+\section{Lógica}
+
+A \emph{lógica matemática} tem como base a \textbf{veracidade de uma proposição}, de modo a determinar se uma afirmação matemática é verdadeira ou falsa; às afirmações verdadeiras damos o nome de \textbf{teoremas}. Por exemplo, você provavelmente sabe que "a razão entre o perímetro e o diâmetro de uma circunferência é sempre $\pi$'". 
+Isso é uma verdade inquestionável, independente do tamanho da circunferência. Note que o objeto matemático \textbf{circunferência} é \emph{diferente} do desenho da circunferência, pois, como sabemos, \emph{os objetos matemáticos são abstratos}, não existem na materialidade e são perfeitos.
+\par
+Na matemática, como comentado anteriormente, exige-se um grande rigor na escrita: não são admitidas como verdadeiras proposições como \emph{"Estude todos os dias", "Ela é linda",} entre outras, pois há lacunas que não foram preenchidas (quem é ela?, o que é ser "linda"?, estudar o quê?).
+\subsection{Exemplo}
+Mas e quanto à frase \emph{"Todo número inteiro par, maior ou igual a 4, é resultado da soma de dois números primos"}, ela é uma proposição? Sim, visto que, por definição, uma proposição é \emph{uma sentença que é considerada verdadeira ou falsa} (tem um propósito bem objetivo). Mas e quanto ao seu valor lógico, a proposição é verdadeira ou falsa? Podemos analisar, mas façamos as seguintes perguntas:
+\begin{itemize}
+    \item "O que é um número inteiro?"
+    \item "O que é um número par?"
+    \item "O que é um número?"
+    \item "O que é uma soma?"
+    \item ...
+\end{itemize}
+Note que, só neste exemplo, é possível encontrar mais camadas e camadas de perguntas, mas não é o objetivo desvendar tais questões agora. Admitemos as seguintes definições como verdades:
+\begin{enumerate}
+    \item \textbf{Definição 1}: \emph{Sendo $a$ e $b$ inteiros, dizemos que $a$ divide $b$ se existir um número $x$ de tal modo que $ a \times x = b $.} Assim, escrevemos $a|b$ indicando que $a$ divide $b$.
+    \begin{enumerate}
+    \item "6 divide 12?". Com base na definição 1, existe um número $x$ tal que $6 \times x = 12$. Tomemos, portanto, $x = 2$. Agora me diz: 0 é divisor de algum número inteiro? Para isso, suponha, por absurdo, que deve existir um número $z$ tal que $ 0 \times z = b$; no entanto, por definição, o produto de 0 com qualquer número resulta no próprio 0. Então, 0 é divisor de um número inteiro, mas somente dele e de nenhum outro número.
+    \item Podemos tirar algumas conclusões dessa definição, como:
+    \begin{itemize}
+        \item -5 é divisor de 100: $(-5) \times (-20) = 100$;
+        \item 21 é divisor de -441: $21 \times (-21) = (-441)$;
+        \item 1 e -1 são divisores de quaisquer inteiros: $(-1) \times x = b$.
+    \end{itemize}
+    \end{enumerate}
+    
+    \item \textbf{Definição 2}: um número $a$ é par se $2|a$, ou seja, se existe $a \times 2 = b$.
+    \begin{itemize}
+        \item \emph{Tentativa de} Prova: Suponha, por negação, que $a \times 2 \ne b$. Tomando $a$ como 4 e $b$ como 8, teremos a expressão $4 \times 2 \ne 8$, o que é um absurdo. Logo, se $a \times 2 \ne b$ é falso, o contrário é verdadeiro.
+    \end{itemize}
+    \item \textbf{Definição 3}: um inteiro $a$ é ímpar se existe um inteiro $k$ tal que $a = (2 \times k) + 1$.
+    \item \textbf{Definição 4}: um inteiro $p$ é primo se, e somente se, $ p > 1 $ e os únicos divisores de $p$ forem 1 e $p$.
+\end{enumerate}
+
+Com base nessas definições, vamos analisar as seguintes proposições e, depois, verificar se a proposição inicial \emph{"Todo número inteiro par, maior ou igual a 4, é resultado da soma de dois números primos"} é verdadeira.
+
+\begin{enumerate}
+    \item \emph{"A soma de dois inteiros pares é par"}: com base na Definição 1, tomemos dois inteiros $a$ e $b$, tais que, sendo $x$ e $y$ inteiros quaisquer, $2 \times x = a$ e $2 \times y = b$. Se a soma deles é par, então existe um inteiro $n$ tal que $a \times b = 2 \times n$. Como $a = 2 \times x$ e $b = 2 \times y$, temos:
+    \begin{equation}
+        a + b = 2 \times n
+        \Longrightarrow (2 \times x) + (2 \times y) = 2 \times n
+        \Longrightarrow 2 \times (x + y) = 2 \times n
+    \end{equation}
+    Podemos concluir, portanto, que $x + y = n$, e que a proposição inicial é verdadeira e ela é um teorema! 
+    \item \emph{"Se o produto dos inteiros $a$ e $b$ for par, um dos dois inteiros é par"}: suponha que os dois inteiros são ímpares, ou seja, tal situação nos deixa com os inteiros $a = (2 \times k) + 1$ e $b = (2 \times j) + 1$, onde $k, j$ são inteiros quaisquer.
+    Sendo $n$ o produto $a \times b$, a expressão originada a partir da proposição será, portanto:
+        \begin{align*}
+        a \times b = n &\implies 
+        ((2 \times k) + 1) \times ((2 \times j) + 1) = a \times b \\ &\implies 
+        4kj + 2k + 2j + 1 = a \times b \\ &\implies
+        2 \times (2kj + k + j) + 1 = a \times b \\ &\implies
+        2 \times c + 1 = a \times b
+        \end{align*}
+    Reduzindo a expressão ao inteiro $c$, temos que o produto $a \times b$ é ímpar, o que é uma contradição, já que no ínício definimos tal produto como par! Então, a contraposição da proposição é falsa, o que torna a proposição verdade!
+    \footnote{Acredito que a demonstração não está errada não, mesmo sendo eu quem fiz; de qualquer forma, a proposição é mesmo verdadeira.}
+    \item \emph{"Se $a|b$ e $b|a$, então $a = b$"}: essa proposição é falsa, vejamos um contraexemplo. Sejam os inteiros $a = 1$ e $b = -1$; temos que $ 1 \times (-1) = (-1)$ e $(-1) \times (-1) = 1$. No entanto, $a \ne b$!
+    \item \emph{"Todo número inteiro par, maior ou igual a 4, é resultado da soma de dois números primos"}: essa afirmação é uma \textbf{Conjectura}; não se sabe de nenhum contraexemplo até o presente momento, mas também é algo que não se pode provar de maneira abstrata pelas proposições acima nem outras.
+\end{enumerate}
+Pode ter sido muita informação por agora, mas isso é algo que a gente se acostuma com o tempo. De toda forma, vamos dar uma olhada na "linguagem da lógica", que nos permitiu fazer todas essas operações.
+
+\subsection{Linguagem e Lógica}
+
+\section{To Be Continued...}
 
 \end{document}
