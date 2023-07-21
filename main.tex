@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
+\usepackage{array}
 
 \title{Discrete Math}
 \author{andriel vinicius}
@@ -94,7 +95,7 @@ Note que, só neste exemplo, é possível encontrar mais camadas e camadas de pe
 Com base nessas definições, vamos analisar as seguintes proposições e, depois, verificar se a proposição inicial \emph{"Todo número inteiro par, maior ou igual a 4, é resultado da soma de dois números primos"} é verdadeira.
 
 \begin{enumerate}
-    \item \emph{"A soma de dois inteiros pares é par"}: com base na Definição 1, tomemos dois inteiros $a$ e $b$, tais que, sendo $x$ e $y$ inteiros quaisquer, $2 \times x = a$ e $2 \times y = b$. Se a soma deles é par, então existe um inteiro $n$ tal que $a \times b = 2 \times n$. Como $a = 2 \times x$ e $b = 2 \times y$, temos:
+    \item \emph{"A soma de dois inteiros pares é par"}: com base na Definição 1, tomemos dois inteiros $a$ e $b$, tais que, sendo $x$ e $y$ inteiros quaisquer, $2 \times x = a$ e $2 \times y = b$. Se a soma deles é par, então existe um inteiro $n$ tal que $a + b = 2 \times n$. Como $a = 2 \times x$ e $b = 2 \times y$, temos:
     \begin{equation}
         a + b = 2 \times n
         \Longrightarrow (2 \times x) + (2 \times y) = 2 \times n
@@ -117,7 +118,120 @@ Com base nessas definições, vamos analisar as seguintes proposições e, depoi
 \end{enumerate}
 Pode ter sido muita informação por agora, mas isso é algo que a gente se acostuma com o tempo. De toda forma, vamos dar uma olhada na "linguagem da lógica", que nos permitiu fazer todas essas operações.
 
-\subsection{Linguagem e Lógica}
+\section{Linguagem e Lógica}
+Como notado e utilizado, a linguagem matemática deve ser muito precisa e todos os seus termos, declarados. A partir daqui, devemos observar com mais aprofundamento os aspectos da linguagem matemática, mais precisamente como sua lógica é construída.
+\subsection{Princípios básicos da proposição}
+Uma proposição deve obedecer às seguintes restrições:
+\begin{enumerate}
+    \item \textbf{Princípio da identidade}: uma proposição verdadeira é verdadeira, e uma falsa é falsa;
+    \item \textbf{Princípio da não-contradição}: nenhuma proposição pode ser verdadeira e falsa simultaneamente; 
+    \item \textbf{Princípio do terceiro excluído}: uma proposição só pode ser verdadeira \textbf{ou} falsa, não havendo uma terceira possibilidade.
+\end{enumerate}
+Por mais que pareça algo óbvio, é fundamental que tais princípios sejam definidos antes de proposições serem operadas para evitar contradições e sabermos as "regras" do jogo.
+\subsection{Tabela-verdade e Conjunções}
+Na lógica, a estrutura da \emph{tabela-verdade} serve para listar todos as possibilidades de uma interação entre proposições. Tomando as proposições A e B, é possível listar seus valores da seguinte forma: \\
+\begin{align*}
+\begin{tabular}{c|c}
+A & B \\
+\hline
+V & V \\
+V & F \\
+F & V \\
+F & F \\
+\end{tabular}
+\end{align*}
+
+Agora, temos o total de possibilidades da interação entre as proposições. No entanto, elas ainda não estão se relacionando; para que isso aconteça, devemos utilizar das \emph{conjunções}, de modo a manipular esses valores e gerar um valor final. Vamos analisar cada uma das conjunções:
+
+\subsubsection{Conjunção \emph{AND}}
+A conjunção \emph{end}, escrita como $\land$, gera somente um valor verdadeiro \emph{se as duas proposições forem verdadeiras}.
+Tabela-verdade:
+\begin{align*}
+    \begin{tabular}{cc|c}
+         A & B & A $\land$ B  \\
+        \hline
+         V & V & V \\
+         V & F & F \\
+         F & V & F \\
+         F & F & F \\
+    \end{tabular}
+\end{align*}
+
+\subsubsection{Conjunção \emph{OR}}
+A conjunção \emph{or}, escrita como $\lor$, gera um valor verdadeiro quando \emph{ao menos uma proposição é verdadeira}.
+Tabela-verdade:
+\begin{align*}
+    \begin{tabular}{cc|c}
+         A & B & A $\lor$ B \\
+         \hline
+         V & V & V \\
+         V & F & V \\
+         F & V & V \\
+         F & F & F \\
+    \end{tabular}
+\end{align*}
+
+\subsubsection{Conjunção \emph{XOR}}
+A conjunção \emph{xor}, escrita como $\vee$, gera um valor verdadeiro quando \emph{uma proposição é verdadeira ou outra}.
+Tabela-verdade:
+\begin{align*}
+    \begin{tabular}{cc|c}
+         A & B & A $\vee$ B \\
+         \hline
+         V & V & F \\
+         V & F & V \\
+         F & V & V \\
+         F & F & F \\
+    \end{tabular}
+\end{align*}
+
+\subsubsection{Conjunção \emph{IMPLIES}}
+A conjunção \emph{implies}, escrita como $\implies$, indica as relações:
+\begin{itemize}
+    \item \emph{Se A, então B};
+    \item \emph{A somente, se B};
+    \item \emph{A é condição suficiente para B};
+    \item \emph{B segue de A};
+    \item \emph{B é condição necessária para A}.
+\end{itemize}
+Ou seja, ela gera um valor positivo em todos os casos exceto quando a proposição $B$ for falsa, pois $B$ é consequência de $A$. 
+\textbf{OBS.:}: Se $A \implies B$, então $\lnot B \implies \lnot A$.
+Tabela-verdade:
+\begin{align*}
+    \begin{tabular}{cc|c}
+         A & B & A $\implies$ B  \\
+         \hline
+         V & V & V \\
+         V & F & F \\
+         F & V & V \\
+         F & F & V \\
+    \end{tabular}
+\end{align*}
+
+\subsubsection{Conjunção \emph{IF AND ONLY IF}}
+A conjunção de equivalência \emph{if and only if}, escrita como $\iff$, indica a relação \emph{"A se, e somente se B"} e \emph{"A é condição necessária e suficiente para B"}, de modo que gera um valor positivo somente quando as duas têm o mesmo valor.
+Tabela-verdade:
+\begin{align*}
+    \begin{tabular}{cc|c}
+         A & B & A $\iff$ B  \\
+         \hline
+         V & V & V \\
+         V & F & F \\
+         F & V & F \\
+         F & F & V \\
+    \end{tabular}
+\end{align*}
+
+\subsubsection{Conjunção \emph{NOT}}
+Ao contrário das anteriores, a conjunção \emph{not}, escrita como $\lnot$, \textbf{inverte o valor de uma proposição}. Ou seja, a tabela-verdade seria:
+\begin{align*}
+    \begin{tabular}{c|c}
+        A & $\lnot$ A  \\
+        \hline
+        V & F \\
+        F & V \\
+    \end{tabular}
+\end{align*}
 
 \section{To Be Continued...}
 
