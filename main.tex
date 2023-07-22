@@ -29,8 +29,7 @@ x - 1 = 0
 \mapsto x = 1
 \end{math}
 Assim, está provado que "por a + b" que $ x = 1 $!
-
-\subsection{Demonstrações}
+\par
 Essas operações que acabamos de fazer são denominadas \textbf{demonstrações}. É por meio dessa comunicação que as ideias do matemático são registradas e passadas adiante. Elas são feitas seguindo os princípios da \emph{lógica matemática}.
 
 \subsection{Lógica matemática}
@@ -232,6 +231,95 @@ Ao contrário das anteriores, a conjunção \emph{not}, escrita como $\lnot$, \t
         F & V \\
     \end{tabular}
 \end{align*}
+
+\subsection{Prova e Demonstração}
+Uma demonstração consiste em uma argumentação, de forma irrefutável, de que uma proposição é verdadeira. Se a proposição puder ser demonstrada, ela é denominada \emph{Teorema}; antes de ser provada, a proposição é denominada \emph{conjectura}.
+Existem algumas formas de demonstração, como:
+\subsubsection{Demonstração direta $A \implies B$}
+Este tipo de demonstração consiste em utilizar argumentos convincentes para justificar que, se $A$ (\emph{Hipótese}) é verdadeira, $B$ (\emph{Tese}), por consequência, também é.  
+Sua estrutura consiste em:
+\begin{enumerate}
+    \item Suponha que a hipótese ($A$) é verdadeira;
+    \item Utilize de argumentos lógicos convincentes para chegar em $B$;
+    \item Conclua, por fim, que a tese ($B$) é verdadeira;
+\end{enumerate}
+Analisemos o seguinte caso: \emph{"Sejam $a, b, c \in \mathbb{Z}$. Se $a|b$ e $b|c$, então $a|c$"}.
+\begin{itemize}
+    \item Hipótese: "Suponha que $a, b, c \in \mathbb{Z}$, de modo que $a|b$ e $b|c$."
+    \item Tese: "Concluímos, portanto, que $a|c$." \footnote{Há um erro bastante comum nessa demonstração que é \emph{pressupor que a tese é verdadeira} e acabar usando-a durante a prova, algo que é incorreto, pois a tese é onde queremos chegar e não sabemos se ela é verdadeira ou não!} 
+    \item Rascunho: Se $a|b$, então existe um inteiro $x$ de modo que $a \times x = b$, da mesma forma que se $b|c$, existe um inteiro $y$ de modo que $b \times y = c$. Como a tese diz que $a|c$, então existe um inteiro $z$ de modo que $a \times z = c$.
+    Assim, teremos a seguinte situação:
+    \begin{align*}
+    c &\implies 
+    b \times y \\ &\implies
+    (a \times x) \times y \\
+    \end{align*}
+    Como $a \times z = c$, e $z = x \times y$, está provado que $a|c$. Vamos à demonstração de fato:
+    \item \textbf{Prova}: Suponha $a, b, c \in \mathbb{Z}$, tal que $a|b$ e $b|c$. Ou seja, existem $x, y \in \mathbb{Z}$
+    tal que $a \times x = b$ e $b \times y = c$. Seja também $z = x \times y$. Assim, teremos: 
+    \begin{align*}
+        a \times z \\ &\implies
+        a \times (x \times y) \\ &\implies
+        (a \times x) \times y \\ &\implies
+        b \times y \\ &\implies
+        c
+    \end{align*}
+    Logo, existe um inteiro $z$ tal que $a \times z = c$.
+\end{itemize}
+
+\subsubsection{Demonstração por Contraposição}
+A demonstração por contraposição consiste em uma subversão da demonstração direta $A \implies B$. Como dito na seção acerca da conjunção \emph{implies}, se $A \implies B$, logo $\lnot B \implies \lnot A$ - lembrando que a negação de uma proposição altera o seu valor (verdadeiro $\rightarrow$ falso e vice-versa).
+Sua estrutura é:
+\begin{enumerate}
+    \item Suponha $\lnot B$;
+    \item Elabore e utilize argumentos convincentes para chegar a $\lnot A$;
+    \item Conclua $\lnot A$.
+\end{enumerate}
+Analisemos o seguinte caso: \emph{"Sejam $a, b, n$ inteiros positivos. Se $n = a \times b$, então $ a \leq \sqrt{n}$ ou $b \leq \sqrt{n}$"}.
+\begin{itemize}
+    \item Não-Tese: Suponha, por contraposição, que $a \leq \sqrt{n}$ ou $b \leq \sqrt{n}$ é falso.
+    \item Não-Hipótese: Então, $n = a \times b$ é falso.
+    \item \textbf{Prova}: Considere que sabemos todas as propriedades das raízes quadradas e não precisamos definí-las aqui. Se $a$ e $b$ não satisfazem às condições da tese, então a não-tese é verdadeira e concluímos que $a > \sqrt{n}$ ou $b > \sqrt{n}$. Analisando a primeira desigualdade $a > \sqrt{n}$, podemos multiplicar ambos os lados por $b$:
+    \begin{align*}
+        a \times b > \sqrt{n} \times b
+    \end{align*}
+    Com a segunda desigualdade $b > \sqrt{n}$, podemos multiplicar ambos os lados por $\sqrt{n}$:
+    \begin{align*}
+        \sqrt{n} \times b > \sqrt{n} \times \sqrt{n} &\implies
+        \sqrt{n} \times b > n
+    \end{align*}
+    Unindo as duas desigualdades, temos:
+    \begin{align*}
+        a \times b > \sqrt{n} \times b > n
+    \end{align*}
+   Como $a \times b > n$, não podemos ter $a \times b = n$, portanto.
+    
+\end{itemize}
+
+\subsubsection{Demonstração $A \iff B$}
+A demonstração \emph{se e somente se} se dá do mesmo modo da demonstração direta com um detalhe a mais: devemos provar $A \implies B$ e $B \implies A$; nessa demonstração, o resultado será verdadeiro se ambas as proposições forem verdadeiras ou falsas.
+Analisemos o seguinte caso: \emph{"Um inteiro $a$ é par se, e somente se, $a + 1$ é ímpar."}
+\begin{itemize}
+    \item Hipótese: $a$ é um inteiro e é par;
+    \item Tese: $a + 1$ é um inteiro e ímpar;
+    \item \textbf{Prova}: Seja $a$ um inteiro par. Provemos primeiro que $a$ é par e $a + 1$ é ímpar. Se $a$ é par, existe um inteiro $x$ tal que $a = 2 \times x$; se $a + 1$ é ímpar, existe $a + 1 = 2 \times x + 1$ e, portanto, $a + 1$ é ímpar.
+    Por fim, provemos que $a + 1$ é ímpar e $a$ é par.
+    Se $a + 1$ é ímpar, existe um inteiro $x$ tal que $a + 1 = 2 \times x + 1$; subtraindo -1 de ambos os lados da equação, temos $a = 2 \times x$. Se $2|a$, $a$ é par.
+    
+\end{itemize}
+
+\subsubsection{Demonstração por Contradição}
+A demonstração por contradição consiste em provar que uma proposição é verdadeira negando-a e chegando em um absurdo, ou seja, em uma situação impossível. Assim, se a negação da proposição é impossível, a proposição é obrigatoriamente verdadeira. \footnote{Curiosamente, alguns teoremas matemáticos são provados exatamente desse jeito, o que evidencia o seu caráter objetivo.}
+Analisemos o seguinte caso: \emph{"A soma de dois números ímpares $x$ e $y$ é sempre um número par."}
+\begin{itemize}
+    \item Sejam $x, y \in \mathbb{Z}$, tais que existem $m, n \in \mathbb{Z}$ de modo que $x = 2 \times m + 1$ e $y = 2 \times n + 1$, ou seja, $x$ e $y$ são ímpares. Seja também $a$ um inteiro par, ou seja, existe um inteiro $b$ tal que $a = 2 \times b$. Suponha que $x + y \ne a$ e analisemos:
+    \begin{align*}
+        x + y \ne a &\implies
+        (2 \times m + 1) + (2 \times n + 1) \ne 2 \times b \\ &\implies
+        2 \times (m + n + 1) \ne 2 \times b \\
+    \end{align*}
+    Perceba que ambos os lados da desigualdade são múltiplos de 2, portanto, pares, gerando uma contradição com $x + y = a$. Assim, a proposição inicial é verdadeira. \footnote{Devo verificar se isso está totalmente coerente.}
+\end{itemize}
 
 \section{To Be Continued...}
 
