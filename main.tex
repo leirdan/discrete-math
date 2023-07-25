@@ -2,7 +2,9 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsfonts}
 \usepackage{array}
+\usepackage{csquotes}
 
 \title{Discrete Math}
 \author{andriel vinicius}
@@ -144,7 +146,7 @@ F & F \\
 Agora, temos o total de possibilidades da interação entre as proposições. No entanto, elas ainda não estão se relacionando; para que isso aconteça, devemos utilizar das \emph{conjunções}, de modo a manipular esses valores e gerar um valor final. Vamos analisar cada uma das conjunções:
 
 \subsubsection{Conjunção \emph{AND}}
-A conjunção \emph{end}, escrita como $\land$, gera somente um valor verdadeiro \emph{se as duas proposições forem verdadeiras}.
+A conjunção \emph{and}, escrita como $\land$, gera somente um valor verdadeiro \emph{se as duas proposições forem verdadeiras}.
 Tabela-verdade:
 \begin{align*}
     \begin{tabular}{cc|c}
@@ -379,6 +381,106 @@ Para quaisquer conjuntos $A, B, C$ são válidos:
 \subsubsection{Outros}
 \textbf{Definição 5}: dado o conjunto $A$, denominamos de \emph{Conjuntos das Partes de A} o conjunto formado por todos os subconjuntos de $A$ (incluindo o vazio e ele mesmo).
 
-\section{To Be Continued...}
+\subsection{Operações}
+As operações entre conjuntos tem por objetivo manipular e gerar um conjunto novo a partir de outros já concebidos, igual ou diferente.
 
+\subsubsection{União}
+\textbf{Definição 6}: dados os conjuntos $A$e $B$, define-se a união $A \cup B$ como sendo o conjunto formado por elementos que pertencem a pelo menos $A$ ou $B$, ou seja:
+\begin{displaymath}
+    A \cup B = \{ x; x \in A \text{ ou } x \in B \}
+\end{displaymath}
+
+\subsubsection{Interseção}
+\textbf{Definição 7}: dados os conjuntos $A$e $B$, define-se a interseção $A \cap B$ como sendo o conjunto formado por elementos que pertencem a ambos $A$ e $B$, ou seja:
+\begin{displaymath}
+    A \cap B = \{ x; x \in A \text{ e } x \in B \}
+\end{displaymath}
+
+\subsubsection{Propriedades da Interseção e União}
+\textbf{Observação}: algumas propriedades fazem uso de um tal \emph{conjunto universo}, representado por $\mathbb{U}$, que nada mais é que o total de conjuntos possíveis em uma situação de conjuntos. Ele deve ser fixado e, a partir disso, todos os outros conjuntos estarão contidos em $\mathbb{U}$.
+Sejam os conjuntos $A, B, C$ e esteja fixado $\mathbb{U}$. Temos: \footnote{Não quis fazer a demonstração aqui para não gastar muito tempo, visto que a demonstração não é algo requerido na disciplina e eu gosto de fazer somente para fins de aprendizado, e eu já as fiz anteriormente no meu caderno.}
+\begin{enumerate}
+    \item  
+    \begin{enumerate}
+        \item $A \subseteq A \cup B$;
+        \item $A \cap B \subseteq A$.
+    \end{enumerate}
+    \item Interação com o conjunto universo
+    \begin{enumerate}
+        \item $A \cup \mathbb{U} = \mathbb{U}$;
+        \item $A \cap \mathbb{U} = A$.
+    \end{enumerate}
+    \item Interação com o conjunto vazio
+    \begin{enumerate}
+        \item $A \cup \emptyset = A$;
+        \item $A \cap \emptyset = \emptyset$.
+    \end{enumerate}
+    \item Comutividade
+    \begin{enumerate}
+        \item $A \cup B = B \cup A$;
+        \item $A \cap B = B \cap A$.
+    \end{enumerate}
+    \item Associatividade
+    \begin{enumerate}
+        \item $(A \cup B) \cup C = A \cup (B \cup C)$;
+        \item $(A \cap B) \cap C = A \cap (B \cap C)$.
+    \end{enumerate}
+    \item Distributividade
+    \begin{enumerate}
+        \item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$;
+        \item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Complementar}
+\textbf{Definição 8}: dado um conjunto $A$, denominamos de \emph{complementar} o conjunto formado pelos elementos que não compõem $A$ e denotamos como:
+\begin{displaymath}
+    A^C = \{x; x \notin A\}.
+\end{displaymath}
+\textbf{Propriedades}: fixado $\mathbb{U}$, temos as seguintes propriedades para os conjuntos $A$ e $B$:
+\begin{enumerate}
+    \item $\mathbb{U}^C = \emptyset$ e $\emptyset^C = \mathbb{U}$;
+    \item $(A^C)^C = A$;
+    \item Se $A \subseteq B$, então $B^C \subseteq A^C$;
+    \item Leis de De Morgan:
+    \begin{enumerate}
+        \item $(A \cup B)^C = A^C \cap B^C$;
+        \item $(A \cap B)^C = A^C \cup B^C$
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Diferença}
+\textbf{Definição 9}: a diferença do conjunto $A$ por $B$ é o conjunto
+\begin{displaymath}
+    A \backslash B = \{x; x \in A \text{ e } x \notin B \}
+\end{displaymath}
+Note que, a partir dessa definição, concluímos que $A^C = \mathbb{U} \backslash A$. Mas perceba que não necessariamente $A \backslash B = B \backslash A$. 
+\\
+\textbf{Proposição}: \enquote{Os conjuntos $A \backslash B$ e $A \cap B^C$ são iguais}.
+\begin{enumerate}
+    \item Primeiro, provemos que $(A \backslash B) \subseteq A \cap B^C$:
+    \begin{itemize}
+        \item Seja $x$ um elemento arbitrário do conjunto $A \backslash B$, ou seja, $x \in A$ mas $x \notin B$. Sabendo que $B^C$ é o conjunto de todos os elementos que não estão em $B$, podemos concluir que $x \in (A \cap B^C)$, já que, como definido, $x \in A$ e $x \notin B$. Assim, está provado que $(A \backslash B) \subseteq A \cap B^C$.
+    \end{itemize}
+    \item Agora, provemos que $A \cap B^C \subseteq (A \backslash B)$:
+    \begin{itemize}
+        \item Seja $y \in A \cap B^C$, ou seja, $y \in A$ e $y \notin B$, pois $B^C$ é o conjunto de todos os elementos que não pertencem a $B$. Logo, é possível concluir que $y \in (A \backslash B)$, já que tal conjunto também tem como elementos $y \in A$ e $y \notin B$! Assim, é provado que $A \cap B^C \subseteq (A \backslash B)$.
+    \end{itemize}
+    \item Estando provados que cada um dos conjuntos contém o outro, eles são, na verdade, iguais, já que cada elemento de um corresponde ao mesmo elemento do outro.
+\end{enumerate}
+\subsection{Conjuntos e Lógica}
+Aqui está uma tabela que resume as relações e operadores dos Conjuntos e sua conversão na lógica matemática:
+\begin{center}
+    \begin{tabular}{c|c}
+        Relação em Conjunto & Fórmula de Lógica  \\
+        \hline
+        $A = B$ & $P \iff Q$ \\
+        $A \subseteq B$ & $P \implies Q $\\
+        $A^C $ & $ \lnot P$ \\
+        $A \cup B$ & $P \vee Q $ \\
+        $ A \cap B$ & $P \land Q $ \\
+    \end{tabular}
+\end{center}
+
+\section{To Be Continued...}
 \end{document}
