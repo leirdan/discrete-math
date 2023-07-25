@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{array}
 
 \title{Discrete Math}
@@ -320,6 +321,63 @@ Analisemos o seguinte caso: \emph{"A soma de dois números ímpares $x$ e $y$ é
     \end{align*}
     Perceba que ambos os lados da desigualdade são múltiplos de 2, portanto, pares, gerando uma contradição com $x + y = a$. Assim, a proposição inicial é verdadeira. \footnote{Devo verificar se isso está totalmente coerente.}
 \end{itemize}
+
+\section{Introdução à teoria dos Conjuntos}
+A definição de \emph{conjunto} é algo abstrato, que não é necessariamente preciso muitas vezes; portanto, para este estudo, diremos que \emph{um conjunto é definido somente por seus elementos}. A partir disso podemos fazer a pergunta: "dado um conjunto $A$ e um elemento $x$, $x$ pertence a $A$?"
+\par
+Conforme visto na parte de lógica, uma proposição só pode assumir um valor verdadeiro ou falso; logo, o elemento $x$ pertence ou não pertence a $A$, ou seja, se for verdadeiro, $x \in A$, caso contrário, $x \notin A$. Contudo, devemos definir e entender as relações que existem neste tópico de conjuntos.
+
+\subsection{Pertinência}
+\subsubsection{Definição de Pertinência}
+\textbf{Definição 1}: tomando um objeto $x$ e um conjunto $A$, dizemos que \emph{$x$ pertence a $A$} se $x$ for um elemento de $A$ e o denotamos como $x \in A$.
+Também dizemos que \emph{$x$ não pertence a $A$} se $x$ não for um elemento do conjunto $A$ e o denotamos como $x \notin A$.
+\par
+\textbf{Exemplo}: Seja o conjunto $P$ = \{$x$; $x$ é primo\}. Assim, temos algumas relações existentes nesse conjunto, como: 
+\begin{enumerate}
+    \item $17 \in P$;
+    \item $4 \notin P$;
+    \item $1 \notin P$.
+    \item ...
+\end{enumerate}
+Ampliando o escopo da relação, temos que dois conjuntos $A$ e $B$ são \emph{iguais} se necessariamente eles têm os mesmos elementos; dessa forma, eles serão diferentes somente quando existir $y$ tal que $y \in A$ e $y \notin B$ ou vice-versa.
+\par
+Além disso, a definição de conjunto não impede que um elemento $x$ de um conjunto $X$ seja um conjunto $Z$. Por exemplo, seja $Q$ = \{\{$4, 3, 7$\}, $2$, $3$\}:
+\begin{itemize}
+    \item $\{$4, 3, 7$\} \in Q$;
+    \item $2 \in Q$;
+    \item $7 \notin Q$.
+\end{itemize}
+Note que, desse modo, a nomenclatura de "elemento" e "conjunto" é variável e depende da relação do elemento com o conjunto: o elemento 7 pertence ao conjunto $\{4, 3, 7\}$ (este que é elemento de $Q$), mas não pertence ao conjunto $Q$.
+\subsubsection{Conjunto Vazio}
+\textbf{Definição 2}: o conjunto $A$ que não possui elementos $x$ é denominado \emph{conjunto vazio} e denotado por $\emptyset$. Perceba que ele pode ser entendido a princípio como um conjunto $A$ tal que $A = \{x; x \notin A\}$, mas isso é, na verdade, um \emph{paradoxo}, então não consideremos essa definição.
+
+\subsection{Inclusão}
+\subsubsection{Definição de Inclusão}
+\textbf{Definição 3}: tomados dois conjuntos $A$ e $B$, dizemos que $A$ \emph{está contido em} $B$ se, e somente se, todos os elementos $x \in A$ também $x \in B$, da mesma forma que dizemos que $B$ \emph{está contido em} $A$ se, e somente se, todos os elementos $y \in B$ também $y \in A$. Utilizando símbolos, dizemos, no primeiro caso, que $A \subseteq B$ e, no segundo, $B \subseteq A$. Para indicar que um conjunto $A$ não está contido em $B$, utilizamos $ A \nsubseteq B$. \\
+\textbf{Exemplo}: Sejam $T$ o conjunto de todos os triângulos em um plano e $P$ o conjunto de polígonos de um plano. Como um triângulo é um polígono, sabemos logo que $T \subseteq P$. No entanto, nem todo polígono é um triângulo: tomando um quadrado $q$ de lados iguais, temos que $q \in P$, mas $q \notin T$. Logo, $P \nsubseteq T$. \\
+\textbf{Proposição}: \emph{Para todo conjunto $A$, vale $\emptyset \in A$}.
+\begin{itemize}
+    \item \emph{Demonstração}: utilizando-se da demonstração por contradição, suponha que, para todo conjunto $A$, $\emptyset \nsubseteq A$, ou seja, existe um elemento $x$ tal que $x \in \emptyset$ mas $x \notin A$. Contudo, isso é um absurdo, pois um conjunto vazio não pode ter nenhum elemento. Portanto, a proposição é sempre verdadeira.
+\end{itemize}
+\textbf{Definição 4}: Tomados dois conjuntos $A$ e $B$, denominamos de \emph{inclusão própria} a relação quando $A \subseteq B$ mas $A \ne B$; o símbolo utilizado para indicar tal situação é: $A \subsetneq B$. \\
+\subsubsection{Propriedades} 
+Para quaisquer conjuntos $A, B, C$ são válidos:
+\begin{enumerate}
+    \item \emph{Reflexividade}: $A \subseteq A$;
+    \begin{itemize}
+        \item Suponha que $A \nsubseteq A$. Conforme a definição 3, então deve existir um elemento $x$ tal que $x \in A$ e $x \notin A$; obviamente, isso gera um completo absurdo. Logo, a propriedade é verdadeira.
+    \end{itemize}
+    \item \emph{Antissimetria}: Se $A \subseteq B$ e $B \subseteq A$, então $A = B$;
+    \begin{itemize}
+        \item Se tomados os elementos $x$ de $A$ um a um de forma que $x \in A$ e $x \in B$, então $A \subseteq B$. Da mesma forma, se tomados os elementos $y$ de $B$ de modo que $y \in B$ e $y \in A$, então $B \subseteq A$. Assim, se os dois conjuntos estão inclusos um no outro, então $A = B$.
+    \end{itemize}
+    \item \emph{Transitividade}: Se $A \subseteq B$ e $B \subseteq C$, então $A \subseteq C$.
+    \begin{itemize}
+        \item Seja $x \in A$. Se $A \subseteq B$, então $x \in B$. Da mesma forma, se $B \subseteq C$, $x \in C$. Assim, $A \subseteq C$.
+    \end{itemize}
+\end{enumerate}
+\subsubsection{Outros}
+\textbf{Definição 5}: dado o conjunto $A$, denominamos de \emph{Conjuntos das Partes de A} o conjunto formado por todos os subconjuntos de $A$ (incluindo o vazio e ele mesmo).
 
 \section{To Be Continued...}
 
