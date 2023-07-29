@@ -543,7 +543,7 @@ Existem algumas possibilidades, como $[a, b[$, $] - \infty, b] $ e outras. \\ No
         \enquote{De que outras formas podemos representar o conjunto vazio utilizando as duas notações de definição de conjuntos que conhecemos?}
         \\
         \emph{Primeira}: Seja $\emptyset = \{\}$. \\
-        \emph{Segunda}: Seja $\emptyset = \{x; x \notin \mathbb{U}^C \}$.
+        \emph{Segunda}: Seja $\emptyset = \{x; x \notin \mathbb{U} \}$.
     \item \enquote{Decida quais das afirmações a seguir estão corretas. Justifique suas respostas.}
     \begin{enumerate}
         \item $\emptyset \in \emptyset$;
@@ -573,6 +573,28 @@ Existem algumas possibilidades, como $[a, b[$, $] - \infty, b] $ e outras. \\ No
         \end{itemize}
     \end{enumerate}
 \end{enumerate}
+
+\section{Operações Básicas}
+Definem-se 2 operações fundamentais na matemática a partir da teoria dos conjuntos numéricos: a \emph{adição} e \emph{multiplicação}. Delas, advém a \emph{subtração}, onde a diferença $x - y$ pode ser vista como $x + (-y)$, e a \emph{divisão}, pois a divisão de $\frac{z}{w}$ pode ser entendida também como $z \times \frac{1}{w}$.
+\subsection{Potenciação}
+\textbf{Definição 10}: a potência $n \in \mathbb{N}^*$ de um número real $a$ é entendida como a multiplicação do número $a$ por ele mesmo $n$ vezes, ou seja:
+\begin{displaymath}
+    a \times a \times a \times a \times ... = a^n
+\end{displaymath}
+\textbf{Definição 11} (Propriedades): Sendo $a, b, m, n \in \mathbb{R}$, temos:
+\begin{enumerate}
+    \item Se $a \ne 0$, então $a^0 = 1$;
+    \item $a^{-n} = \frac{1}{a^n}$ e $a^{1/n} = \sqrt[n]{a}$, se $n \in \mathbb{R}^*_+$;
+    \item $a^m \times a^n = a^{m+n}$;
+    \item $\frac{a^m}{a^n} = a^{m-n}$;
+    \item $(a^m)^n = a^{m \times n}$;
+    \item $a^{m^n} = a^{m \times m \times m \times m ...}$;
+    \item $(a \times b)^n = a^n \times b^n$;
+    \item $(\frac{a}{b})^n = \frac{a^n}{b^n}$;
+    \item $a^{\frac{m}{n}} = \sqrt[n]{a^m}$.
+\end{enumerate}
+
+\emph{Observação}: não é correto dizer, por exemplo, que $\sqrt{4} = \pm 2$, pois essa expressão não responde qual é a raiz de 4, mas sim quais os valores que, quando elevados a 2, resultam em 4 (2 e -2).  Portanto, prefira utilizar $\sqrt{4} = 2$.
 
 \section{To Be Continued...}
 \end{document}
