@@ -357,7 +357,7 @@ Note que, desse modo, a nomenclatura de "elemento" e "conjunto" é variável e d
 \subsubsection{Definição de Inclusão}
 \textbf{Definição 3}: tomados dois conjuntos $A$ e $B$, dizemos que $A$ \emph{está contido em} $B$ se, e somente se, todos os elementos $x \in A$ também $x \in B$, da mesma forma que dizemos que $B$ \emph{está contido em} $A$ se, e somente se, todos os elementos $y \in B$ também $y \in A$. Utilizando símbolos, dizemos, no primeiro caso, que $A \subseteq B$ e, no segundo, $B \subseteq A$. Para indicar que um conjunto $A$ não está contido em $B$, utilizamos $ A \nsubseteq B$. \\
 \textbf{Exemplo}: Sejam $T$ o conjunto de todos os triângulos em um plano e $P$ o conjunto de polígonos de um plano. Como um triângulo é um polígono, sabemos logo que $T \subseteq P$. No entanto, nem todo polígono é um triângulo: tomando um quadrado $q$ de lados iguais, temos que $q \in P$, mas $q \notin T$. Logo, $P \nsubseteq T$. \\
-\textbf{Proposição}: \emph{Para todo conjunto $A$, vale $\emptyset \in A$}.
+\textbf{Proposição de Inclusão Universal do $\emptyset$}: \emph{Para todo conjunto $A$, vale $\emptyset \subseteq A$}.
 \begin{itemize}
     \item \emph{Demonstração}: utilizando-se da demonstração por contradição, suponha que, para todo conjunto $A$, $\emptyset \nsubseteq A$, ou seja, existe um elemento $x$ tal que $x \in \emptyset$ mas $x \notin A$. Contudo, isso é um absurdo, pois um conjunto vazio não pode ter nenhum elemento. Portanto, a proposição é sempre verdadeira.
 \end{itemize}
@@ -481,6 +481,98 @@ Aqui está uma tabela que resume as relações e operadores dos Conjuntos e sua 
         $ A \cap B$ & $P \land Q $ \\
     \end{tabular}
 \end{center}
+
+\subsection{Números}
+\subsubsection{Naturais}
+Denominamos de \emph{números naturais} aqueles que pertencem ao conjunto:
+\begin{displaymath}
+    \mathbb{N} = \{0, 1, 2, ..., n, n + 1, ...\}
+\end{displaymath}
+\emph{Observação}: denotamos $\mathbb{N}^*$ o conjunto $\mathbb{N} \backslash \{0\}$.
+
+\subsubsection{Inteiros}
+Denominamos de \emph{números inteiros} aqueles que pertencem ao conjunto:
+\begin{displaymath}
+    \mathbb{Z} = \{..., -m, -m + 1, ..., 0, +1, +2, ..., +n, +n + 1, ...\}
+\end{displaymath}
+\emph{Observação}: a partir da operação de \enquote{diferença}, é possível gerar os conjuntos
+\begin{itemize}
+    \item $\mathbb{Z}^* = Z \backslash \{0\}$;
+    \item $\mathbb{Z}_+ = \{ x; x \ge 0 \}$;
+    \item $\mathbb{Z}^*_+ = \{ x; x > 0 \}$;
+    \item $\mathbb{Z}_- = \{ x; x \leq 0 \}$;
+    \item $\mathbb{Z}^*_- = \{ x; x < 0 \}$.
+\end{itemize}
+
+\subsubsection{Racionais}
+Denominamos de \emph{números racionais} aqueles que pertencem ao conjunto:
+\begin{displaymath}
+    \mathbb{Q} = \{\frac{p}{q} ; p, q \in \mathbb{Z}, q \ne 0 \}
+\end{displaymath}
+A representação pode ser finita ($\frac{12}{30},...$) ou uma dízima periódica 
+($0.123123...$).
+
+\subsubsection{Irracionais}
+Denominamos de \emph{números irracionais} aqueles que têm uma representação decimal infinita e não-periódica, como $\pi$ e $\sqrt{2}$. Para estes, não há um "padrão" que defina seu conjunto, chamado de $\mathbb{I}$.
+
+\subsubsection{Reais}
+Denominamos de \emph{números reais} aqueles que pertencem ao conjunto:
+\begin{displaymath}
+    \mathbb{R} = \mathbb{Q} \cup \mathbb{I}
+\end{displaymath}
+A partir do conjunto dos reais, podemos definir o conjunto dos irracionais como resultado de:
+\begin{displaymath}
+    \mathbb{I} = \mathbb{R} \backslash \mathbb{Q}
+\end{displaymath}
+\textbf{Observação}: entre dois números reais há, pelo menos, um número irracional e outro racional.
+
+\subsection{Intervalos reais}
+Sejam $a, b \in \mathbb{R}$. O intervalo \emph{aberto} entre eles é o subconjunto:
+\begin{displaymath}
+    ]a, b[ = \{ x \in \mathbb{R}; a < x < b\}
+\end{displaymath}
+Por outro lado, o intervalo \emph{aberto} é:
+\begin{displaymath}
+    [a, b] = \{ x \in \mathbb{R}; a \leq x \leq b\}
+\end{displaymath}
+Existem algumas possibilidades, como $[a, b[$, $] - \infty, b] $ e outras. \\ Note que $ ]-\infty, +\infty [ = \mathbb{R}$.
+
+\subsection{Exercícios de Conjuntos - A TERMINAR} 
+\begin{enumerate}
+    \item 
+        \enquote{De que outras formas podemos representar o conjunto vazio utilizando as duas notações de definição de conjuntos que conhecemos?}
+        \\
+        \emph{Primeira}: Seja $\emptyset = \{\}$. \\
+        \emph{Segunda}: Seja $\emptyset = \{x; x \notin \mathbb{U}^C \}$.
+    \item \enquote{Decida quais das afirmações a seguir estão corretas. Justifique suas respostas.}
+    \begin{enumerate}
+        \item $\emptyset \in \emptyset$;
+        \begin{itemize}
+            \item \textbf{Proposição falsa}: se $\emptyset \in \emptyset$, significa que $\emptyset$ tem ao menos um elemento, o que vai contra sua definição e nos leva a um absurdo.
+        \end{itemize}
+        \item $\emptyset \subseteq \emptyset$;
+        \begin{itemize}
+            \item \textbf{Proposição verdadeira}: suponha que $\emptyset \nsubseteq \emptyset$. Logo, há um elemento $x \in \emptyset$ que não pertence a $\emptyset$. Isso gera um paradoxo óbvio, além de que, por definição, o conjunto vazio não aceita elementos. Logo, a proposição é verdadeira.
+        \end{itemize}
+        \item $\emptyset \in \{\emptyset\}$;
+        \begin{itemize}
+            \item \textbf{Proposição verdadeira}: tomado o conjunto $A = \{\emptyset\}$, suponha que $\emptyset \notin \{\emptyset\}$. No entanto, sabendo que o conjunto $A$ tem $\emptyset$ como elemento, chegamos a uma contradição. Logo, a proposição é verdadeira.
+        \end{itemize}
+        \item $\emptyset \subseteq \{\emptyset\}$.
+        \begin{itemize}
+            \item \textbf{Proposição verdadeira}: tome o conjunto $A = \{\emptyset\}$. De acordo com a Inclusão Universal do $\emptyset$, para todo conjunto $A$, vale $\emptyset \subseteq A$. Desse modo, a proposição é verdadeira.
+        \end{itemize}
+    \end{enumerate}
+    \item \enquote{Considere $A = \{ x \in \mathbb{Z}_+ ; x < 3 \}$. Calcule $\mathbb{P}(A)$.} \\
+    Temos que $\mathbb{P}(A)$ é o conjunto das partes de $A$. Logo, temos $\mathbb{P}(A) = \{\emptyset, \{0\}, \{1\}, \{2\}, \{0, 1\}, \{1, 2\}, A \}$
+    \item \enquote{Dê exemplos de conjuntos $A, B, C$, justificando com os cálculos, que satisfaçam:}
+    \begin{enumerate}
+        \item \enquote{$A \cup (B \cap C) \ne (A \cup B) \cap C$. Qual o conjunto que será sempre igual a $A \cup (B \cap C)$?}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    \end{enumerate}
+\end{enumerate}
 
 \section{To Be Continued...}
 \end{document}
