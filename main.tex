@@ -1,9 +1,10 @@
-\documentclass{article}
+\documentclass[13pt,letterpaper]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{array}
+\usepackage{tikz}
 \usepackage{csquotes}
 
 \title{Discrete Math}
@@ -13,7 +14,7 @@
 \begin{document}
 
 \maketitle
-
+\tableofcontents
 \section{Introdução}
 \par
 Diferente das outras ciências, na matemática não é a \emph{experiência} que prova seus fatos, mas sim a \textbf{lógica e dedução}.
@@ -595,6 +596,386 @@ Definem-se 2 operações fundamentais na matemática a partir da teoria dos conj
 \end{enumerate}
 
 \emph{Observação}: não é correto dizer, por exemplo, que $\sqrt{4} = \pm 2$, pois essa expressão não responde qual é a raiz de 4, mas sim quais os valores que, quando elevados a 2, resultam em 4 (2 e -2).  Portanto, prefira utilizar $\sqrt{4} = 2$.
+
+\section{Equações e Inequações}
+Equações e inequações são ferramentas matemáticas poderosas e básicas de encontrar valores de incógnitas que tornem uma proposição verdadeira. 
+
+\subsection{Equação do 1º Grau}
+Uma equação do primeiro grau é uma equação da forma
+\begin{displaymath}
+    ax + b = 0
+\end{displaymath}
+onde $a, b, x  \in \mathbb{R}$, de modo que $a \ne 0$ e $x$ é denominada \textbf{incógnita}.
+\subsubsection{Propriedades}
+Sejam $a, b, c, d \in \mathbb{R}$. Assim, valem:
+\begin{enumerate}
+    \item Se $a = c$ e $b = d$, então $a + c = b + d$;
+    \item Se $a = b$, então $a + c = b + c$;
+    \item Se $a = c$ e $b = d$, então $a \times c = b \times d$;
+    \item Se $a = b$, então $a \times c = b \times c$.
+\end{enumerate}
+\textbf{Exemplo A}: resolva $2x + \frac{x}{5} = 121$. \\
+\emph{Resolução}:
+\begin{align*}
+    2x + \frac{x}{5} = 121 (\times 5) &\implies 
+    10x + x = 605 \\ &\implies
+    11x = 605 \quad (\times \frac{1}{11}) \\ &\implies 
+    x = \frac{605}{11} \\ &\implies 
+    x = 55
+\end{align*}
+\textbf{Exemplo B}: se $x$ representa um dígito na base 10 na equação
+\begin{displaymath}
+    x11 + 1x1 + 11x = 777,
+\end{displaymath}
+qual o valor de $X$? \\
+\emph{Resolução}: Seja $x \in \{0, 1, 2, ..., 9 \}$, então:
+\begin{align*}
+    x11 + 1x1 + 11x = 777 &\implies 
+    (100x + 11) + (10x + 100 + 1) + (x + 110) = 777 \\ &\implies
+    100x + 10x + x + 222 = 777 \quad (-222) \\ &\implies
+    111x = 777 - 222 \\ &\implies
+    111x = 555 \quad (\times \frac{1}{111}) \\ &\implies
+    x = 5
+\end{align*}
+\emph{Para que fique mais fácil de enxergar a reescrita na primeira linha, suponha que $x = 9$, faça as operações, compare com a equação e note que o algarismo 9 sempre vai substituir o lugar do $x$}.
+
+\subsection{Equação de várias variáveis}
+
+\subsection{Sistema de equações lineares}
+
+\subsection{Equação de 2º Grau}
+
+\subsection{Inequações de 1º Grau}
+
+\subsection{Inequações de 2º Grau}
+
+\section{Funções}
+\textbf{Definição de Função}: função é uma \emph{relação binária} $f: X \rightarrow Y$ ($f$ de $X$ em $Y$) de um conjunto $X$ (\textbf{domínio}) com um conjunto $Y$ (\textbf{contra-domínio}), onde existem $x \in X, y \in Y$ e podemos associar o objeto $x$ ao $y$ através da função $f$, de notação $f(x) = y$. \\
+\textbf{Definição de Imagem}: denominamos de \textbf{Imagem} os conjuntos abaixo:
+\begin{itemize}
+    \item O conjunto $f(x) = \{y \in Y; \text{existe } x \in X \text{ onde } f(x) = y \} \subseteq Y$ é denominado \textbf{Imagem de f}. No exemplo a seguir, a Imagem de $f$ é $\{x, y, z \}$;
+    \item Dado $x \in X$, o único elemento $y$ tal que $y = f(x) \in Y$ correspondente é chamado de \textbf{Imagem de x}. Em outras palavras, a imagem de $x$ é o elemento $y$ com o qual ele está associado. 
+\end{itemize}
+\subsection{Lei de Associação da Função}
+Só é considerada função uma relação que obecede às seguintes regras:
+\begin{enumerate}
+    \item \textbf{Todo} elemento de $X$ deve estar associado a algum elemento de $Y$;
+    \item Cada elemento de $X$ só pode estar associado a um \textbf{único} elemento de $Y$ (só pode ter uma imagem).
+\end{enumerate}
+Ou seja, a função é uma relação binária dos tipos \emph{um para um} e \emph{muitos para um}, já que estas relações permitem com que os elementos do domínio estejam relacionadas a somente 1 elemento do contra-domínio (mesmo que, no caso da \enquote{muitos para um}, um elemento do contra-domínio esteja associado a mais de 1 elemento do domínio). \\
+Exemplo de função:
+\begin{center}
+  \begin{tikzpicture}
+  % Conjunto X
+  \draw (0, 0) ellipse (1cm and 1.7cm);
+  \node at (-1.5, 1) {$X$};
+  \node[circle, fill=white!30, draw] (a1) at (0, 1) {$a$};
+  \node[circle, fill=white!30, draw] (a2) at (0, 0) {$b$};
+  \node[circle, fill=white!30, draw] (a3) at (0, -1) {$c$};
+
+  % Conjunto Y
+  \draw (4, 0) ellipse (1cm and 2.5cm);
+  \node at (5.5, 1) {$Y$};
+  \node[circle, fill=white!30, draw] (b0) at (4, 2) {$s$};
+  \node[circle, fill=white!30, draw] (b1) at (4, 1) {$x$};
+  \node[circle, fill=white!30, draw] (b2) at (4, 0) {$y$};
+  \node[circle, fill=white!30, draw] (b3) at (4, -1) {$z$};
+  \node[circle, fill=white!30, draw] (b4) at (4, -2) {$w$};
+
+  % Linhas e setas
+  \draw[->] (a1) -- (b1);
+  \draw[->] (a2) -- (b2);
+  \draw[->] (a3) -- (b3);
+  
+  \node[above] at (2, 1) {$f$};
+\end{tikzpicture}
+\end{center}
+\emph{Note que essa função obedece às regras de que todos os elementos de $X$ estão associados a um elemento de $Y$, e somente a um elemento.} \\
+Mas e essa função aqui:
+
+\begin{center}
+    \begin{tikzpicture}
+  % Conjunto X
+  \draw (0, 0) ellipse (1cm and 1.7cm);
+  \node at (-1.5, 1) {$X$};
+  \node[circle, fill=white!30, draw] (a1) at (0, 1) {$a$};
+  \node[circle, fill=white!30, draw] (a2) at (0, 0) {$b$};
+  \node[circle, fill=white!30, draw] (a3) at (0, -1) {$c$};
+
+  % Conjunto Y
+  \draw (4, 0) ellipse (1cm and 1cm);
+  \node at (5.5, 1) {$Y$};
+  \node[circle, fill=white!30, draw] (b1) at (4, 0.5) {$x$};
+  \node[circle, fill=white!30, draw] (b3) at (4, -0.5) {$z$};
+
+  % Linhas e setas
+  \draw[->] (a1) -- (b1);
+  \draw[->] (a1) -- (b3);
+  \draw[->] (a2) -- (b3);
+  
+  \node[above] at (2, 1) {$f$};
+  \end{tikzpicture}
+\end{center}
+
+Ela está certa? É de fato uma função? \\
+De fato isso não é uma função: primeiro, note que o elemento $c$ não está associado a nenhum elemento em $Y$; então, perceba também que $f(a) = x$ e $f(a) = z$ mas $x \ne y$, o que faz $a$ ter duas imagens, o que não é permitido. \\
+
+\textbf{Exemplo A}: Considere as funções:
+\begin{align*}
+    p: \mathbb{R} \rightarrow \mathbb{R}_+ &\\ 
+    x \rightarrow x^2; \\
+    q: \mathbb{R}_+ \rightarrow \mathbb{R} &\\
+    x \rightarrow \sqrt{x};
+\end{align*} 
+Qual o domínio, contra-domínio e lei de associação de cada uma das funções? \\
+\emph{Resolução}:
+\begin{enumerate}
+    \item Função $p$:
+    \begin{itemize}
+        \item Domínio: \textbf{Reais};
+        \item Contra-domínio: \textbf{Reais não-negativos};
+        \item Lei de associação: $p(x) = x^2$.
+    \end{itemize}
+    \item Função $q$:
+    \begin{itemize}
+        \item Domínio: \textbf{Reais não-negativos};
+        \item Contra-domínio: \textbf{Reais};
+        \item Lei de associação: $q(x) = \sqrt{x}$.
+    \end{itemize}
+\end{enumerate}
+\subsection{Identidade}
+\textbf{Definição de Identidade}: Seja $I_x : X \rightarrow X$ tal que $I_x(x) = x$ para todo $x \in X$. Denominamos essa função de \textbf{Função Identidade}; ou seja, todo elemento do domínio aponta para ele mesmo no contra-domínio.
+
+\subsection{Função Injetora}
+\textbf{Definição de Injetividade}: denominamos de \emph{injetiva} uma função de relação binária \enquote{1 para 1}, de modo que, para todos $x_1, x_2 \in X$, $x_1 \ne x_2$ que implica que $f(x_1) \ne f(x_2)$. Em outras palavras, cada elemento da imagem de $f$ está ligado a somente um elemento de $X$. \\
+\emph{Definições alternativas}: 
+\begin{enumerate}
+    \item $f$ é injetiva se, e somente se, para todos os $x_1, x_2 \in X$, $f(x_1) = f(x_2) \implies x_1 = x_2$;
+    \item $f$ é injetiva se, para cada $y \in f(X)$ (imagem de $f$), existir somente um $x \in X$ tal que $y = f(x)$.
+\end{enumerate}
+Diagrama de uma função injetiva:
+\begin{center}
+    \begin{tikzpicture}
+      % Conjunto X
+      \draw (0, 0) ellipse (1cm and 1.5cm);
+      \node[circle, draw] (x1) at (0, 0.5) {$x_1$};
+      \node[circle, draw] (x2) at (0, -0.5) {$x_2$};
+      % Conjunto Y
+      \draw (4, 0) ellipse (1cm and 2cm);
+      \node[circle, draw] (y1) at (4, 1) {$y_1$};
+      \node[circle, draw] (y2) at (4, 0) {$y_2$};
+      \node[circle, draw] (y3) at (4, -1) {$y_3$};
+      % Função f
+      \draw[->] (x1) -- (y1);
+      \draw[->] (x2) -- (y2);
+        \node[above] at (2, 1) {$f$};
+    \end{tikzpicture}
+\end{center}
+
+\textbf{Exemplo B}: considerando as funções $p, q$ da seção \enquote{Lei de Associação das Funções}, elas são de qual classificação? \\
+\emph{Resolução}:
+\begin{itemize}
+    \item Função $p$: \textbf{não é injetiva}. Sendo $x_1 = 2, x_2 = (-2)$, note o seguinte caso: \footnote{Para provar algo, devo partir de alguma definição. Parti, portanto, da primeira das definições alternativas.}
+    \begin{align*}
+        f(x_1) = f(x_2) \implies
+        f(2) = f(-2) \implies
+        2 = -2
+    \end{align*}
+    Tal conclusão é um absurdo. Logo, a função $p$ não é injetiva, já que dois elementos diferentes têm a mesma imagem.
+    \item Função $q$: \textbf{é injetiva}. Sejam $x_1, x_2 \in \mathbb{R}_+$ tais que:
+    \begin{align*}
+        f(x_1) = f(x_2) &\implies
+        \sqrt{x_1} = \sqrt{x_2} \\ &\implies
+        (\sqrt{x_1})^2 = (\sqrt{x_2})^2 \\ &\implies
+        x_1 = x_2
+    \end{align*}
+    Logo, a função $q$ é injetiva segundo a primeira definição alternativa.
+\end{itemize}
+\subsection{Função Sobrejetora}
+\textbf{Definição de Sobrejetividade}: denominamos de \emph{sobrejetiva} uma função $f$ tal que $f(X) = Y$, ou seja, onde a imagem é equivalente ao contra-domínio. \\
+\emph{Definição alternativa}: $f$ é sobrejetiva se, para todo $y \in Y$, existe $x \in X$ (não necessariamente um único $x$) tal que $f(x) = y$. \\
+
+Diagrama de uma função sobrejetiva:
+
+\begin{center}
+    \begin{tikzpicture}
+      % Conjunto X
+      \draw (0, 0) ellipse (1cm and 2.5cm);
+      \node[circle, draw] (x1) at (0, 1.5) {$x_1$};
+      \node[circle, draw] (x2) at (0, 0.5) {$x_2$};
+      \node[circle, draw] (x3) at (0, -0.5) {$x_3$};
+      \node[circle, draw] (x4) at (0, -1.5) {$x_4$};
+      % Conjunto Y
+      \draw (4, 0) ellipse (1cm and 2cm);
+      \node[circle, draw] (y1) at (4, 1) {$y_1$};
+      \node[circle, draw] (y2) at (4, 0) {$y_2$};
+      \node[circle, draw] (y3) at (4, -1) {$y_3$};
+    
+      % Função f
+      \draw[->] (x1) -- (y1);
+      \draw[->] (x2) -- (y3);
+      \draw[->] (x3) -- (y2);
+      \draw[->] (x4) -- (y3);
+        \node[above] at (2, 1.5) {$f$};
+      
+    \end{tikzpicture}
+\end{center}
+
+\textbf{Exemplo C}: considerando as funções $p$ e $q$ das seções anteriores, elas são sobrejetivas? \\
+\emph{Resolução}:
+\begin{itemize}
+    \item Função $p$: \textbf{é sobrejetiva}. Provemos que $Im_p = \mathbb{R_+}$. Por definição, $Im_p \subseteq \mathbb{R_+}$. Então, seja $r \in \mathbb{R_+}$, para qualquer $r$; temos que $\sqrt{r} \in \mathbb{R}$, logo, executando a função temos:
+    \begin{displaymath}
+        p(x) = x^2 \implies p(\sqrt{r}) = (\sqrt{r})^2 \implies p(\sqrt{r}) = r
+    \end{displaymath}
+    Portanto, como a operação é válida para todo $r \in \mathbb{R_+}$, temos que $\mathbb{R_+} \subseteq Im_p$. Então, $Im_p = \mathbb{R_+}$.
+    
+    \item Função $q$: \textbf{não é sobrejetiva}, pois não existe $x \in \mathbb{R_+}$ tal que $\sqrt{x} = -1$, e $-1 \in \mathbb{R}$ (contra-domínio) mas não pertence a $\mathbb{R_+}$ (domínio).
+
+\end{itemize}
+
+\subsection{Função Bijetora}
+\textbf{Definição de Bijetividade}: denominamos de $bijetiva$ a função $f$ que é sobrejetiva e injetiva simultaneamente, ou seja, se, e somente se, para todo $y \in Y$, existe um $x \in X$ tal que $f(x) = y$.
+
+Diagrama de uma função bijetora:
+\begin{center}
+    \begin{tikzpicture}
+      % Conjunto X
+      \draw (0, 0) ellipse (1cm and 2cm);
+      \node[circle, draw] (x1) at (0, 1) {$x_1$};
+      \node[circle, draw] (x2) at (0, 0) {$x_2$};
+      \node[circle, draw] (x3) at (0, -1) {$x_3$};
+      % Conjunto Y
+      \draw (4, 0) ellipse (1cm and 2cm);
+      \node[circle, draw] (y1) at (4, 1) {$y_1$};
+      \node[circle, draw] (y2) at (4, 0) {$y_2$};
+      \node[circle, draw] (y3) at (4, -1) {$y_3$};
+    
+      % Função f
+      \draw[->] (x1) -- (y2);
+      \draw[->] (x2) -- (y3);
+      \draw[->] (x3) -- (y1);
+        \node[above] at (2, 1) {$g$};
+      
+    \end{tikzpicture}
+\end{center}
+Note que, como $p$ e $q$ não são sobrejetivas e injetivas simultaneamente, elas não são bijetivas!
+
+\subsection{Função Composta}
+\textbf{Definição de Composta}: Sejam as funções 
+\begin{align*}
+    f: X \rightarrow Y, \\
+    g: Z \rightarrow W,
+\end{align*}
+de modo que o domínio de $g$ é equivalente ao contra-domínio de $f$, logo $Y \subseteq Z$. Denominamos de \textbf{função composta} a função de $g$ com $f$ com domínio em $X$ e contra-domínio em $W$, denotada por $g \circ f$, e que a cada $x \in X$ satisfaz 
+\begin{displaymath}
+    W = (g \circ f) (x) \implies g(f(x)) \in W
+\end{displaymath} \\
+
+Diagrama de uma função composta:
+\begin{center}
+    \begin{tikzpicture}
+        \node at (-1.5, 1) {$X$};
+      \draw (0, 0) ellipse (1cm and 1.5cm);
+      \node[circle, draw] (x1) at (0, 0) {$x_1$};
+      % Conjunto Z
+      \node at (5.2, 1) {$Z$};
+      \draw (4, 0) ellipse (1cm and 1.5cm);
+      \node at (4.2, 0.7) {$Y$};
+      \node[circle, draw] (y1) at (4, 0) {$y_1$};
+      % Conjunto W
+      \draw (8, 0) ellipse (1cm and 1.5cm);
+      \node at (9.2, 1) {$W$};
+      \node[circle, draw] (w1) at (8, 0) {$w_1$};
+    
+      % Função f
+      \draw[->] (x1) -- (y1);
+        \node[above] at (2, 0) {$f(x) = y$};
+      \draw[->] (y1) -- (w1);
+        \node[above] at (6, 0) {$g(y) = w$};
+      \draw[-latex] (x1) to[bend right] (w1);
+      \node [above] at (4,-2) {$g(f(x)) = w$};
+    \end{tikzpicture}
+\end{center}
+\textbf{Exemplo A}: Sejam 
+\begin{align*}
+f(x) = e^x, &\\
+g(x) = x^2 - 1. 
+\end{align*}
+Calcule $f \circ g$ e $g \circ f$.
+\\
+\emph{Resolução}:
+\begin{enumerate}
+    \item $f$ de $g$:
+    \begin{align*}
+        f \circ g &\implies f(g(x)) \\ &\implies
+        f(x^2 - 1) \\ &\implies
+        f(x^2 - 1) = e^{x^2-1}
+    \end{align*}
+    \item $g$ de $f$:
+    \begin{align*}
+        g \circ f &\implies g(f(x)) \\ &\implies
+        g(e^x) = {(e^x)}^2 - 1 \\ &\implies
+        g(e^x) = e^{2x} - 1
+    \end{align*}
+\end{enumerate}
+\textbf{Exemplo B}: Sendo $f: X \rightarrow Y$, mostre que:
+\begin{enumerate}
+    \item $f \circ I_x = f$ \\
+    \emph{Resolução}:
+    O domínio de $f \circ I_x$ é $X$, pois advém da função identidade, 
+    enquanto seu contra-domínio é $Y$, que advém da função $f$.
+    Tomando $x \in X$ para qualquer $x$, podemos saber a lei de associação ao executar a função:
+    \begin{displaymath}
+        (f \circ I_X)(x) \implies f(I_x(x)) \implies f(x)
+    \end{displaymath}
+    Então, é possível definir a função composta da seguinte forma:
+    \begin{align*}
+        f \circ I_x: &\ X \rightarrow Y \\
+        & x \rightarrow f(x),
+    \end{align*}
+    que é exatamente equivalente à função $f$.
+
+    \item $I_y \circ f = f$ \\
+    \emph{Resolução}:
+    O domínio de $I_y \circ f$ é $X$, pois vem de $f$, enquanto seu contra-domínio é $Y$, o qual vem de $I_y$.
+    Tomando $x \in X$ para qualquer $x$, temos:
+    \begin{displaymath}
+        (I_y \circ f)(x) \implies I_y(f(x)) \implies I_y(y) \implies y = f(x)
+    \end{displaymath}
+    Portanto, definimos a função composta assim:
+    \begin{align*}
+        I_y \circ f: &\ X \rightarrow Y \\
+        & x \rightarrow f(x),
+    \end{align*}
+    exatamente igual à função $f$.
+\end{enumerate}
+
+\subsection{Função Inversa}
+\textbf{Definição de Inversa}: denominamos de \emph{Função Inversa} uma função \textbf{Bijetora}\footnote{Somente funções bijetoras podem ser inversas.} $f: X \rightarrow Y$ se existe uma outra função $f^{-1}: Y \rightarrow X$\footnote{Pode receber qualquer outro nome, como $g$} tal que:
+\begin{itemize}
+    \item $f \circ f^{-1} = I_Y$;
+    \item $f^{-1} \circ f = I_X$.
+\end{itemize}
+\textbf{Exemplo A}: calcule a inversa da função $f(x) = 4x - 8$. \\
+\emph{Resolução passo a passo:}
+\begin{enumerate}
+    \item \textbf{Atribua $y = f(x)$}: $y = 4x - 8$;
+    \item \textbf{Troque $x$ por $y$}: $x = 4y - 8$;
+    \item \textbf{Isole o $y$}: $4y = x + 8 \implies y = \frac{x + 8}{4}$
+    \item \textbf{Substitua $y$ pela inversa}: $f^{-1} = \frac{x + 8}{4}$
+\end{enumerate}
+\textbf{Exemplo B}: Verifique se as funções anteriormente definidas $p$ e $q$ são inversas.
+\\
+\emph{Resolução}: \\
+Verifiquemos $q \circ p: \mathbb{R} \rightarrow \mathbb{R}$. Temos:
+    \begin{align*}
+        (q \circ p)(x) &\implies q(p(x)) \\
+        &\implies q(x^2) \\
+        &\implies \sqrt{x^2} \\
+        &\implies |x|
+    \end{align*}
+Como $|x| \ne I_x$, temos que as funções $p$ e $q$ não são inversas.
 
 \section{To Be Continued...}
 \end{document}
