@@ -75,48 +75,48 @@ Mas e quanto à frase \emph{"Todo número inteiro par, maior ou igual a 4, é re
 \end{itemize}
 Note que, só neste exemplo, é possível encontrar mais camadas e camadas de perguntas, mas não é o objetivo desvendar tais questões agora. Admitemos as seguintes definições como verdades:
 \begin{enumerate}
-    \item \textbf{Definição 1}: \emph{Sendo $a$ e $b$ inteiros, dizemos que $a$ divide $b$ se existir um número $x$ de tal modo que $ a \times x = b $.} Assim, escrevemos $a|b$ indicando que $a$ divide $b$.
+    \item \textbf{Definição 1}: \emph{Sendo $a$ e $b$ inteiros, dizemos que $a$ divide $b$ se existir um número $x$ de tal modo que $ a \cdot x = b $.} Assim, escrevemos $a|b$ indicando que $a$ divide $b$.
     \begin{enumerate}
-    \item "6 divide 12?". Com base na definição 1, existe um número $x$ tal que $6 \times x = 12$. Tomemos, portanto, $x = 2$. Agora me diz: 0 é divisor de algum número inteiro? Para isso, suponha, por absurdo, que deve existir um número $z$ tal que $ 0 \times z = b$; no entanto, por definição, o produto de 0 com qualquer número resulta no próprio 0. Então, 0 é divisor de um número inteiro, mas somente dele e de nenhum outro número.
+    \item "6 divide 12?". Com base na definição 1, existe um número $x$ tal que $6 \cdot x = 12$. Tomemos, portanto, $x = 2$. Agora me diz: 0 é divisor de algum número inteiro? Para isso, suponha, por absurdo, que deve existir um número $z$ tal que $ 0 \cdot z = b$; no entanto, por definição, o produto de 0 com qualquer número resulta no próprio 0. Então, 0 é divisor de um número inteiro, mas somente dele e de nenhum outro número.
     \item Podemos tirar algumas conclusões dessa definição, como:
     \begin{itemize}
-        \item -5 é divisor de 100: $(-5) \times (-20) = 100$;
-        \item 21 é divisor de -441: $21 \times (-21) = (-441)$;
-        \item 1 e -1 são divisores de quaisquer inteiros: $(-1) \times x = b$.
+        \item -5 é divisor de 100: $(-5) \cdot (-20) = 100$;
+        \item 21 é divisor de -441: $21 \cdot (-21) = (-441)$;
+        \item 1 e -1 são divisores de quaisquer inteiros: $(-1) \cdot x = b$.
     \end{itemize}
     \end{enumerate}
     
-    \item \textbf{Definição 2}: um número $a$ é par se $2|a$, ou seja, se existe um inteiro $b$ tal que $a = 2 \times b$.
+    \item \textbf{Definição 2}: um número $a$ é par se $2|a$, ou seja, se existe um inteiro $b$ tal que $a = 2 \cdot b$.
     \begin{itemize}
-        \item \emph{Tentativa de} Prova: suponha, por negação, que $a$ não é par, de modo que $ a \ne 2 \times b$ (2 não divide $a$). Porém, por definição, $2|a$, o que nos leva a uma contradição. Se a negação da proposição nos leva a uma contradição, a proposição por si só é verdadeira.
+        \item \emph{Tentativa de} Prova: suponha, por negação, que $a$ não é par, de modo que $ a \ne 2 \cdot b$ (2 não divide $a$). Porém, por definição, $2|a$, o que nos leva a uma contradição. Se a negação da proposição nos leva a uma contradição, a proposição por si só é verdadeira.
         \footnote{Talvez isso aqui contenha um erro, vou verificar depois.}
     \end{itemize}
-    \item \textbf{Definição 3}: um inteiro $a$ é ímpar se existe um inteiro $k$ tal que $a = (2 \times k) + 1$.
+    \item \textbf{Definição 3}: um inteiro $a$ é ímpar se existe um inteiro $k$ tal que $a = (2 \cdot k) + 1$.
     \item \textbf{Definição 4}: um inteiro $p$ é primo se, e somente se, $ p > 1 $ e os únicos divisores de $p$ forem 1 e $p$.
 \end{enumerate}
 
 Com base nessas definições, vamos analisar as seguintes proposições e, depois, verificar se a proposição inicial \emph{"Todo número inteiro par, maior ou igual a 4, é resultado da soma de dois números primos"} é verdadeira.
 
 \begin{enumerate}
-    \item \emph{"A soma de dois inteiros pares é par"}: com base na Definição 1, tomemos dois inteiros $a$ e $b$, tais que, sendo $x$ e $y$ inteiros quaisquer, $2 \times x = a$ e $2 \times y = b$. Se a soma deles é par, então existe um inteiro $n$ tal que $a + b = 2 \times n$. Como $a = 2 \times x$ e $b = 2 \times y$, temos:
+    \item \emph{"A soma de dois inteiros pares é par"}: com base na Definição 1, tomemos dois inteiros $a$ e $b$, tais que, sendo $x$ e $y$ inteiros quaisquer, $2 \cdot x = a$ e $2 \cdot y = b$. Se a soma deles é par, então existe um inteiro $n$ tal que $a + b = 2 \cdot n$. Como $a = 2 \cdot x$ e $b = 2 \cdot y$, temos:
     \begin{equation}
-        a + b = 2 \times n
-        \Longrightarrow (2 \times x) + (2 \times y) = 2 \times n
-        \Longrightarrow 2 \times (x + y) = 2 \times n
+        a + b = 2 \cdot n
+        \Longrightarrow (2 \cdot x) + (2 \cdot y) = 2 \cdot n
+        \Longrightarrow 2 \cdot (x + y) = 2 \cdot n
     \end{equation}
     Podemos concluir, portanto, que $x + y = n$, e que a proposição inicial é verdadeira e ela é um teorema! 
-    \item \emph{"Se o produto dos inteiros $a$ e $b$ for par, um dos dois inteiros é par"}: suponha que os dois inteiros são ímpares, ou seja, tal situação nos deixa com os inteiros $a = (2 \times k) + 1$ e $b = (2 \times j) + 1$, onde $k, j$ são inteiros quaisquer.
-    Sendo $n$ o produto $a \times b$, a expressão originada a partir da proposição será, portanto:
+    \item \emph{"Se o produto dos inteiros $a$ e $b$ for par, um dos dois inteiros é par"}: suponha que os dois inteiros são ímpares, ou seja, tal situação nos deixa com os inteiros $a = (2 \cdot k) + 1$ e $b = (2 \cdot j) + 1$, onde $k, j$ são inteiros quaisquer.
+    Sendo $n$ o produto $a \cdot b$, a expressão originada a partir da proposição será, portanto:
         \begin{align*}
-        a \times b = n &\implies 
-        ((2 \times k) + 1) \times ((2 \times j) + 1) = a \times b \\ &\implies 
-        4kj + 2k + 2j + 1 = a \times b \\ &\implies
-        2 \times (2kj + k + j) + 1 = a \times b \\ &\implies
-        2 \times c + 1 = a \times b
+        a \cdot b = n &\implies 
+        ((2 \cdot k) + 1) \cdot ((2 \cdot j) + 1) = a \cdot b \\ &\implies 
+        4kj + 2k + 2j + 1 = a \cdot b \\ &\implies
+        2 \cdot (2kj + k + j) + 1 = a \cdot b \\ &\implies
+        2 \cdot c + 1 = a \cdot b
         \end{align*}
-    Reduzindo a expressão ao inteiro $c$, temos que o produto $a \times b$ é ímpar, o que é uma contradição, já que no ínício definimos tal produto como par! Então, a contraposição da proposição é falsa, o que torna a proposição verdade!
+    Reduzindo a expressão ao inteiro $c$, temos que o produto $a \cdot b$ é ímpar, o que é uma contradição, já que no ínício definimos tal produto como par! Então, a contraposição da proposição é falsa, o que torna a proposição verdade!
     \footnote{Acredito que a demonstração não está errada não, mesmo sendo eu quem fiz; de qualquer forma, a proposição é mesmo verdadeira.}
-    \item \emph{"Se $a|b$ e $b|a$, então $a = b$"}: essa proposição é falsa, vejamos um contraexemplo. Sejam os inteiros $a = 1$ e $b = -1$; temos que $ 1 \times (-1) = (-1)$ e $(-1) \times (-1) = 1$. No entanto, $a \ne b$!
+    \item \emph{"Se $a|b$ e $b|a$, então $a = b$"}: essa proposição é falsa, vejamos um contraexemplo. Sejam os inteiros $a = 1$ e $b = -1$; temos que $ 1 \cdot (-1) = (-1)$ e $(-1) \cdot (-1) = 1$. No entanto, $a \ne b$!
     \item \emph{"Todo número inteiro par, maior ou igual a 4, é resultado da soma de dois números primos"}: essa afirmação é uma \textbf{Conjectura}; não se sabe de nenhum contraexemplo até o presente momento, mas também é algo que não se pode provar de maneira abstrata pelas proposições acima nem outras.
 \end{enumerate}
 Pode ter sido muita informação por agora, mas isso é algo que a gente se acostuma com o tempo. De toda forma, vamos dar uma olhada na "linguagem da lógica", que nos permitiu fazer todas essas operações.
@@ -251,24 +251,24 @@ Analisemos o seguinte caso: \emph{"Sejam $a, b, c \in \mathbb{Z}$. Se $a|b$ e $b
 \begin{itemize}
     \item Hipótese: "Suponha que $a, b, c \in \mathbb{Z}$, de modo que $a|b$ e $b|c$."
     \item Tese: "Concluímos, portanto, que $a|c$." \footnote{Há um erro bastante comum nessa demonstração que é \emph{pressupor que a tese é verdadeira} e acabar usando-a durante a prova, algo que é incorreto, pois a tese é onde queremos chegar e não sabemos se ela é verdadeira ou não!} 
-    \item Rascunho: Se $a|b$, então existe um inteiro $x$ de modo que $a \times x = b$, da mesma forma que se $b|c$, existe um inteiro $y$ de modo que $b \times y = c$. Como a tese diz que $a|c$, então existe um inteiro $z$ de modo que $a \times z = c$.
+    \item Rascunho: Se $a|b$, então existe um inteiro $x$ de modo que $a \cdot x = b$, da mesma forma que se $b|c$, existe um inteiro $y$ de modo que $b \cdot y = c$. Como a tese diz que $a|c$, então existe um inteiro $z$ de modo que $a \cdot z = c$.
     Assim, teremos a seguinte situação:
     \begin{align*}
     c &\implies 
-    b \times y \\ &\implies
-    (a \times x) \times y \\
+    b \cdot y \\ &\implies
+    (a \cdot x) \cdot y \\
     \end{align*}
-    Como $a \times z = c$, e $z = x \times y$, está provado que $a|c$. Vamos à demonstração de fato:
+    Como $a \cdot z = c$, e $z = x \cdot y$, está provado que $a|c$. Vamos à demonstração de fato:
     \item \textbf{Prova}: Suponha $a, b, c \in \mathbb{Z}$, tal que $a|b$ e $b|c$. Ou seja, existem $x, y \in \mathbb{Z}$
-    tal que $a \times x = b$ e $b \times y = c$. Seja também $z = x \times y$. Assim, teremos: 
+    tal que $a \cdot x = b$ e $b \cdot y = c$. Seja também $z = x \cdot y$. Assim, teremos: 
     \begin{align*}
-        a \times z \\ &\implies
-        a \times (x \times y) \\ &\implies
-        (a \times x) \times y \\ &\implies
-        b \times y \\ &\implies
+        a \cdot z \\ &\implies
+        a \cdot (x \cdot y) \\ &\implies
+        (a \cdot x) \cdot y \\ &\implies
+        b \cdot y \\ &\implies
         c
     \end{align*}
-    Logo, existe um inteiro $z$ tal que $a \times z = c$.
+    Logo, existe um inteiro $z$ tal que $a \cdot z = c$.
 \end{itemize}
 
 \subsubsection{Demonstração por Contraposição}
@@ -279,24 +279,24 @@ Sua estrutura é:
     \item Elabore e utilize argumentos convincentes para chegar a $\lnot A$;
     \item Conclua $\lnot A$.
 \end{enumerate}
-Analisemos o seguinte caso: \emph{"Sejam $a, b, n$ inteiros positivos. Se $n = a \times b$, então $ a \leq \sqrt{n}$ ou $b \leq \sqrt{n}$"}.
+Analisemos o seguinte caso: \emph{"Sejam $a, b, n$ inteiros positivos. Se $n = a \cdot b$, então $ a \leq \sqrt{n}$ ou $b \leq \sqrt{n}$"}.
 \begin{itemize}
     \item Não-Tese: Suponha, por contraposição, que $a \leq \sqrt{n}$ ou $b \leq \sqrt{n}$ é falso.
-    \item Não-Hipótese: Então, $n = a \times b$ é falso.
+    \item Não-Hipótese: Então, $n = a \cdot b$ é falso.
     \item \textbf{Prova}: Considere que sabemos todas as propriedades das raízes quadradas e não precisamos definí-las aqui. Se $a$ e $b$ não satisfazem às condições da tese, então a não-tese é verdadeira e concluímos que $a > \sqrt{n}$ ou $b > \sqrt{n}$. Analisando a primeira desigualdade $a > \sqrt{n}$, podemos multiplicar ambos os lados por $b$:
     \begin{align*}
-        a \times b > \sqrt{n} \times b
+        a \cdot b > \sqrt{n} \cdot b
     \end{align*}
     Com a segunda desigualdade $b > \sqrt{n}$, podemos multiplicar ambos os lados por $\sqrt{n}$:
     \begin{align*}
-        \sqrt{n} \times b > \sqrt{n} \times \sqrt{n} &\implies
-        \sqrt{n} \times b > n
+        \sqrt{n} \cdot b > \sqrt{n} \cdot \sqrt{n} &\implies
+        \sqrt{n} \cdot b > n
     \end{align*}
     Unindo as duas desigualdades, temos:
     \begin{align*}
-        a \times b > \sqrt{n} \times b > n
+        a \cdot b > \sqrt{n} \cdot b > n
     \end{align*}
-   Como $a \times b > n$, não podemos ter $a \times b = n$, portanto.
+   Como $a \cdot b > n$, não podemos ter $a \cdot b = n$, portanto.
     
 \end{itemize}
 
@@ -306,9 +306,9 @@ Analisemos o seguinte caso: \emph{"Um inteiro $a$ é par se, e somente se, $a + 
 \begin{itemize}
     \item Hipótese: $a$ é um inteiro e é par;
     \item Tese: $a + 1$ é um inteiro e ímpar;
-    \item \textbf{Prova}: Seja $a$ um inteiro par. Provemos primeiro que $a$ é par e $a + 1$ é ímpar. Se $a$ é par, existe um inteiro $x$ tal que $a = 2 \times x$; se $a + 1$ é ímpar, existe $a + 1 = 2 \times x + 1$ e, portanto, $a + 1$ é ímpar.
+    \item \textbf{Prova}: Seja $a$ um inteiro par. Provemos primeiro que $a$ é par e $a + 1$ é ímpar. Se $a$ é par, existe um inteiro $x$ tal que $a = 2 \cdot x$; se $a + 1$ é ímpar, existe $a + 1 = 2 \cdot x + 1$ e, portanto, $a + 1$ é ímpar.
     Por fim, provemos que $a + 1$ é ímpar e $a$ é par.
-    Se $a + 1$ é ímpar, existe um inteiro $x$ tal que $a + 1 = 2 \times x + 1$; subtraindo -1 de ambos os lados da equação, temos $a = 2 \times x$. Se $2|a$, $a$ é par.
+    Se $a + 1$ é ímpar, existe um inteiro $x$ tal que $a + 1 = 2 \cdot x + 1$; subtraindo -1 de ambos os lados da equação, temos $a = 2 \cdot x$. Se $2|a$, $a$ é par.
     
 \end{itemize}
 
@@ -316,11 +316,11 @@ Analisemos o seguinte caso: \emph{"Um inteiro $a$ é par se, e somente se, $a + 
 A demonstração por contradição consiste em provar que uma proposição é verdadeira negando-a e chegando em um absurdo, ou seja, em uma situação impossível. Assim, se a negação da proposição é impossível, a proposição é obrigatoriamente verdadeira. \footnote{Curiosamente, alguns teoremas matemáticos são provados exatamente desse jeito, o que evidencia o seu caráter objetivo.}
 Analisemos o seguinte caso: \emph{"A soma de dois números ímpares $x$ e $y$ é sempre um número par."}
 \begin{itemize}
-    \item Sejam $x, y \in \mathbb{Z}$, tais que existem $m, n \in \mathbb{Z}$ de modo que $x = 2 \times m + 1$ e $y = 2 \times n + 1$, ou seja, $x$ e $y$ são ímpares. Seja também $a$ um inteiro par, ou seja, existe um inteiro $b$ tal que $a = 2 \times b$. Suponha que $x + y \ne a$ e analisemos:
+    \item Sejam $x, y \in \mathbb{Z}$, tais que existem $m, n \in \mathbb{Z}$ de modo que $x = 2 \cdot m + 1$ e $y = 2 \cdot n + 1$, ou seja, $x$ e $y$ são ímpares. Seja também $a$ um inteiro par, ou seja, existe um inteiro $b$ tal que $a = 2 \cdot b$. Suponha que $x + y \ne a$ e analisemos:
     \begin{align*}
         x + y \ne a &\implies
-        (2 \times m + 1) + (2 \times n + 1) \ne 2 \times b \\ &\implies
-        2 \times (m + n + 1) \ne 2 \times b \\
+        (2 \cdot m + 1) + (2 \cdot n + 1) \ne 2 \cdot b \\ &\implies
+        2 \cdot (m + n + 1) \ne 2 \cdot b \\
     \end{align*}
     Perceba que ambos os lados da desigualdade são múltiplos de 2, portanto, pares, gerando uma contradição com $x + y = a$. Assim, a proposição inicial é verdadeira. \footnote{Devo verificar se isso está totalmente coerente.}
 \end{itemize}
@@ -576,21 +576,21 @@ Existem algumas possibilidades, como $[a, b[$, $] - \infty, b] $ e outras. \\ No
 \end{enumerate}
 
 \section{Operações Básicas}
-Definem-se 2 operações fundamentais na matemática a partir da teoria dos conjuntos numéricos: a \emph{adição} e \emph{multiplicação}. Delas, advém a \emph{subtração}, onde a diferença $x - y$ pode ser vista como $x + (-y)$, e a \emph{divisão}, pois a divisão de $\frac{z}{w}$ pode ser entendida também como $z \times \frac{1}{w}$.
+Definem-se 2 operações fundamentais na matemática a partir da teoria dos conjuntos numéricos: a \emph{adição} e \emph{multiplicação}. Delas, advém a \emph{subtração}, onde a diferença $x - y$ pode ser vista como $x + (-y)$, e a \emph{divisão}, pois a divisão de $\frac{z}{w}$ pode ser entendida também como $z \cdot \frac{1}{w}$.
 \subsection{Potenciação}
 \textbf{Definição 10}: a potência $n \in \mathbb{N}^*$ de um número real $a$ é entendida como a multiplicação do número $a$ por ele mesmo $n$ vezes, ou seja:
 \begin{displaymath}
-    a \times a \times a \times a \times ... = a^n
+    a \cdot a \cdot a \cdot a \cdot ... = a^n
 \end{displaymath}
 \textbf{Definição 11} (Propriedades): Sendo $a, b, m, n \in \mathbb{R}$, temos:
 \begin{enumerate}
     \item Se $a \ne 0$, então $a^0 = 1$;
     \item $a^{-n} = \frac{1}{a^n}$ e $a^{1/n} = \sqrt[n]{a}$, se $n \in \mathbb{R}^*_+$;
-    \item $a^m \times a^n = a^{m+n}$;
+    \item $a^m \cdot a^n = a^{m+n}$;
     \item $\frac{a^m}{a^n} = a^{m-n}$;
-    \item $(a^m)^n = a^{m \times n}$;
-    \item $a^{m^n} = a^{m \times m \times m \times m ...}$;
-    \item $(a \times b)^n = a^n \times b^n$;
+    \item $(a^m)^n = a^{m \cdot n}$;
+    \item $a^{m^n} = a^{m \cdot m \cdot m \cdot m ...}$;
+    \item $(a \cdot b)^n = a^n \cdot b^n$;
     \item $(\frac{a}{b})^n = \frac{a^n}{b^n}$;
     \item $a^{\frac{m}{n}} = \sqrt[n]{a^m}$.
 \end{enumerate}
@@ -611,15 +611,15 @@ Sejam $a, b, c, d \in \mathbb{R}$. Assim, valem:
 \begin{enumerate}
     \item Se $a = c$ e $b = d$, então $a + c = b + d$;
     \item Se $a = b$, então $a + c = b + c$;
-    \item Se $a = c$ e $b = d$, então $a \times c = b \times d$;
-    \item Se $a = b$, então $a \times c = b \times c$.
+    \item Se $a = c$ e $b = d$, então $a \cdot c = b \cdot d$;
+    \item Se $a = b$, então $a \cdot c = b \cdot c$.
 \end{enumerate}
 \textbf{Exemplo A}: resolva $2x + \frac{x}{5} = 121$. \\
 \emph{Resolução}:
 \begin{align*}
-    2x + \frac{x}{5} = 121 (\times 5) &\implies 
+    2x + \frac{x}{5} = 121 (\cdot 5) &\implies 
     10x + x = 605 \\ &\implies
-    11x = 605 \quad (\times \frac{1}{11}) \\ &\implies 
+    11x = 605 \quad (\cdot \frac{1}{11}) \\ &\implies 
     x = \frac{605}{11} \\ &\implies 
     x = 55
 \end{align*}
@@ -634,7 +634,7 @@ qual o valor de $X$? \\
     (100x + 11) + (10x + 100 + 1) + (x + 110) = 777 \\ &\implies
     100x + 10x + x + 222 = 777 \quad (-222) \\ &\implies
     111x = 777 - 222 \\ &\implies
-    111x = 555 \quad (\times \frac{1}{111}) \\ &\implies
+    111x = 555 \quad (\cdot \frac{1}{111}) \\ &\implies
     x = 5
 \end{align*}
 \emph{Para que fique mais fácil de enxergar a reescrita na primeira linha, suponha que $x = 9$, faça as operações, compare com a equação e note que o algarismo 9 sempre vai substituir o lugar do $x$}.
@@ -976,6 +976,241 @@ Verifiquemos $q \circ p: \mathbb{R} \rightarrow \mathbb{R}$. Temos:
         &\implies |x|
     \end{align*}
 Como $|x| \ne I_x$, temos que as funções $p$ e $q$ não são inversas.
+
+\subsection{Exercícios de Funções}
+\begin{enumerate}
+    \item \enquote{Em cada um dos itens abaixo, defina uma função com a lei
+de formação dada (indicando domínio e contradomínio). Verifique se é injetiva, sobrejetiva ou bijetiva, a função:}
+    \begin{enumerate}
+        \item \enquote{Que a cada dois números naturais associa seu MDC;} \\
+            \emph{Resolução}: seja a função 
+            \begin{align*}
+                f: \mathbb{N}^2 &\rightarrow \mathbb{N}^* \\
+                x_1, x_2 &\rightarrow mdc(x_1, x_2).
+            \end{align*} 
+            \begin{itemize}
+                \item Injetividade: \textbf{não é injetiva}, visto que $f(6, 2)$ e $f(4, 2)$ geram a mesma imagem, 2.
+                \item Sobrejetividade: \textbf{é sobrejetiva}. Provemos que $Im_f = \mathbb{N}^*$. Por definição, $Im_f \subseteq \mathbb{N}^*$.
+                Portanto, tomemos $x \in \mathbb{N}^*$ para qualquer $x$; então, temos:
+                \begin{displaymath}
+                    f(x, x) \implies mdc(x, x) = x.
+                \end{displaymath}
+                Como é válido para qualquer $x \in \mathbb{N}^*$, temos que $\mathbb{N}^* \subseteq Im_f$, e, consequentemente, são iguais, provando a sobrejetividade.
+        \end{itemize}
+        \item \enquote{Que a cada polinômio (não nulo) com coeficientes reais associa seu grau;} \\
+            \emph{Resolução}: seja a função 
+            \begin{align*}
+                g: \mathbb{R}^* &\rightarrow \mathbb{N} \\
+                p^n &\rightarrow n
+            \end{align*}
+            \begin{itemize}
+                \item Injetividade: \textbf{não é injetiva}, pois $g(x^2 + 2)$ e $g(y^2 - 2y + 1)$ geram a mesma imagem: 2.
+                \item Sobrejetividade: \textbf{é sobrejetiva}. Seja $n \in \mathbb{N}$ para qualquer $n$; então temos:
+                \begin{displaymath}
+                    g(x^n) = n   
+                \end{displaymath}
+                Portanto, ela é sobrejetiva.
+            \end{itemize}
+        \item \enquote{Que a cada figura plana fechada e limitada associa a sua área;}
+            \emph{Resolução}: seja a função
+                \begin{align*}
+                    a: F &\rightarrow \mathbb{R} \\
+                    x_1, x_2 &\rightarrow ???,
+                \end{align*}
+                onde $F$ é o conjunto das figuras planas e limitadas.
+                [TERMINAR RESPOSTA]
+        \item \enquote{Que a cada subconjunto de $\mathbb{R}$ associa seu complementar;} \\
+            \emph{Resolução}: Seja a função
+            \begin{align*}
+                c: \mathbb{R} &\rightarrow \mathbb{R} \\
+                R &\rightarrow R^C
+            \end{align*}
+            \begin{itemize}
+                \item Injetividade: \textbf{é injetiva}. Sejam $R_1, R_2 \subseteq \mathbb{R}$, de modo que $R_1 \ne R_2$. Então, temos:
+                \begin{displaymath}
+                    R_1 \ne R_2 \implies c(R_1) \ne c(R_2) \implies R_1^C \ne R_2^C
+                \end{displaymath}
+                Portanto, é injetiva.
+                \item Sobrejetiva: \textbf{é sobrejetiva}. Provemos que $\mathbb{R} \subseteq Im_c$. Seja $N^C \subseteq \mathbb{R}$ para todo $N^C$, de modo que:
+                \begin{displaymath}
+                    c(N) = N^C
+                \end{displaymath}
+                Portanto, ela é sobrejetiva e, além disso, é \textbf{bijetiva}, pois é sobrejetiva e injetiva simultaneamente.
+            \end{itemize}
+        \item \enquote{Que a cada subconjunto finito de $\mathbb{N}$ associa seu número de elementos;}\\
+            \emph{Resolução}: Seja a função
+            \begin{align*}
+                h: \mathbb{N} &\rightarrow \mathbb{N} \\
+                X &\rightarrow n(X)
+            \end{align*}
+            \begin{itemize}
+                \item Injetividade: \textbf{não é injetiva}, já que, tomando $A = \{ 1, 2, 3\}$ e $B = \{6, 7, 8\}$, temos que $h(A)$ gera a mesma imagem que $h(B)$: 3.
+                \item Sobrejetividade: \textbf{é sobrejetiva}. Suponha $n \in \mathbb{N}$; então, temos:
+                \begin{displaymath}
+                    h(X) \implies n(X) = n
+                \end{displaymath}
+                Portanto, é sobrejetiva.
+            \end{itemize}
+        \item \enquote{Que a cada subconjunto não vazio de $\mathbb{N}$ associa seu menor elemento;} \\
+        \emph{Resolução}: Seja a função
+        \begin{align*}
+            i: \mathbb{N}\backslash \emptyset &\rightarrow \mathbb{N} \\
+            X &\rightarrow inf(X)
+        \end{align*}
+        \begin{itemize}
+            \item Injetividade: \textbf{não é injetiva}. Note que os conjuntos $A = \{ 1, 3, 5, 7\}$ e $B = \{ 1, 2, 4, 8 \}$ geram a mesma imagem: 1.
+            \item Sobrejetividade: \textbf{é sobrejetiva}. Tome $C \subseteq \mathbb{N}$ e $n \in C$; então, temos:
+            \begin{displaymath}
+                i(C) \implies inf(C) = n
+            \end{displaymath}
+            Portanto, é sobrejetiva.
+        \end{itemize}
+    \end{enumerate}
+    \item \enquote{Considere a função $g: [0; 5] \rightarrow \mathbb{R}$ definida por:}
+        \begin{align*}
+            g(x) = \left\{
+                \begin{aligned}
+                    4x - x^2 &; \quad x < 3 \\
+                    x - 2 &; \quad x \ge 3
+                \end{aligned}
+                \right.
+        \end{align*}
+        \enquote{Determine as soluções de:}
+        \begin{enumerate}
+            \item $g(x) = -1$;
+            \begin{enumerate}
+                \item Se $x < 3$: \\ 
+                    Temos $4x - x^2 = -1 \implies 4x - x^2 + 1 = 0$. Aplicando lei de Bhaskara, temos:
+                    \begin{align*}
+                        x &= \frac{-4 \pm \sqrt{4^2 - (-4)}}{-2} \\ \implies 
+                        x &= \frac{-4 \pm \sqrt{20}}{-2} \\ \implies
+                        x &= \frac{-4 \pm 2\sqrt{5}}{-2}
+                    \end{align*}
+                    Portanto, tomando $x_1, x_2 \in \mathbb{R}$, temos as possibilidades:
+                    \begin{displaymath}
+                        x_1 = \frac{-4 + 2\sqrt{5}}{-2} \implies 2 - \sqrt{5} \quad; \quad 
+                        x_2 = \frac{-4 -2\sqrt{5}}{-2} \implies 2 + \sqrt{5}   
+                    \end{displaymath}
+                    Temos que o conjunto solução $S_1$ para este caso é, desse modo: 
+                    \begin{displaymath}
+                        S_1 = \{2 - \sqrt{5}; 2 + \sqrt{5}\} \cap ]-\infty; 3[ \cap [0; 5] = \emptyset
+                    \end{displaymath}
+                \item Se $x \ge 3$: \\
+                    Temos \begin{displaymath}
+                        x - 2 = -1 \implies x - 1 = 0 \implies x = 1.
+                    \end{displaymath}
+                    Temos que o conjunto solução $S_2$ é, portanto:
+                    \begin{displaymath}
+                        S_2 = 1 \cap [3; \infty[ \cap [0; 5] = \emptyset
+                    \end{displaymath}
+                    Portanto, o conjunto solução $S$ para a função $g(x) = -1$ é:
+                    \begin{displaymath}
+                        S = S_1 \cup S_2 \implies S = \emptyset
+                    \end{displaymath} 
+                    Logo, não há solução para quando $g(x) = -1$.
+                \end{enumerate}
+            \item $g(x) = 0$;
+            \begin{enumerate}
+                \item Se $x < 3$: \\
+                    Temos:
+                    \begin{displaymath}
+                        4x - x^2 = 0
+                    \end{displaymath}
+                    Aplicando lei de Bhaskara, temos:
+                    \begin{align*}
+                        x &= \frac{(-4) \pm \sqrt{16 - 0}}{-2} \\ \implies
+                        x &= \frac{(-4) \pm 4}{-2}
+                    \end{align*}
+                    Tomando $x_1, x_2 \in \mathbb{R}$, temos as seguintes possibilidades:
+                    \begin{displaymath}
+                        x_1 = \frac{(-4) - 4}{-2} \implies x_1 = 4 \quad ; \quad
+                        x_2 = \frac{(-4) + 4}{-2} \implies x_2 = 0
+                    \end{displaymath}
+                    Então, seja $S_1$ o seguinte conjunto solução:
+                    \begin{align*}
+                        S_1 &= [0; 4] \cap ]-\infty; 3[ \cap  [0; 5] = [0; 3[
+                    \end{align*}
+                \item Se $x \ge 3$: \\
+                    Temos: 
+                    \begin{displaymath}
+                        x - 2 = 0 \implies x = 2
+                    \end{displaymath}
+                    Então, seja $S_2$ o seguinte conjunto solução:
+                    \begin{align*}
+                        S_2 = 2 \cap [3; \infty[ \cap [0; 5] = \emptyset
+                    \end{align*}
+                    Logo, não há solução para este caso, o que nos resulta no conjunto solução $[0; 3[$ quando $g(x) = 0$.
+            \end{enumerate}
+        \item $g(x) = 3$;
+            \begin{enumerate}
+            \item Se $x < 3$: \\
+                Temos:
+                \begin{displaymath}
+                    4x - x^2 = 3 \implies 4x - x^2 - 3 = 0 
+                \end{displaymath}
+                Aplicando lei de Bhaskara, temos:
+                \begin{align*}
+                    x &= \frac{-4 \pm \sqrt{16 - (-12)}}{-2} \\ \implies
+                    x &= \frac{-4 \pm 2\sqrt{7}}{-2}
+                \end{align*}
+                Tomemos as possibilidades $x_1, x_2 \in \mathbb{R}$:
+                \begin{align*}
+                    x_1 &= \frac{-4 + 2\sqrt{7}}{-2} \implies x_1 = 2 - \sqrt{7} ; \\ 
+                    x_2 &= \frac{-4 - 2\sqrt{7}}{-2} \implies x_2 = 2 + \sqrt{7}
+                \end{align*}
+                Portanto, consideremos $S_1$ o seguinte conjunto solução:
+                \begin{displaymath}
+                    S_1 = [2 - \sqrt{7}; 2 + \sqrt{7}] \cap ]-\infty; 3[ \cap [0; 5] = [0; 3[
+                \end{displaymath}
+            \item Se $x \ge 3$: \\
+                Temos:
+                \begin{displaymath}
+                    x - 2 = 3 \implies x = 5
+                \end{displaymath}
+                Seja $S_2$, então, o seguinte conjunto solução:
+                \begin{displaymath}
+                    S_2 = 5 \cap [3; \infty[ \cap [0; 5] = 5
+                \end{displaymath}
+                Portanto, as possíveis soluções para quando $g(x) = 3$ são:
+                \begin{displaymath}
+                    S_1 \cup S_2 \implies [0; 3[ \cup 5 = {[0; 3[, 5}.
+                \end{displaymath}
+            \end{enumerate}
+        \item Se $g(x) = 4$:
+        \begin{enumerate}
+            \item Caso $x < 3$: \\
+                Temos:
+                \begin{displaymath}
+                    4x - x^2 = 4 \implies 4x - x^2 - 4 = 0
+                \end{displaymath}
+                Aplicando lei de Bhaskara, temos:
+                \begin{align*}
+                    x &= \frac{-4 \pm \sqrt{16 - 16}}{-2} \\ \implies
+                    x &= \frac{-4 \pm 0}{-2} \\ \implies 
+                    x &= 2
+                \end{align*}
+                Temos o conjunto solução $S_1$ tal que:
+                \begin{displaymath}
+                    S_1 = 2 \cap ]-\infty; 3[ \cap [0; 5] = 2
+                \end{displaymath}
+            \item Caso $x \ge 3$: \\
+                Temos:
+                \begin{displaymath}
+                    x - 2 = 4 \implies x = 6
+                \end{displaymath}
+                Temos $S_2$ como o seguinte conjunto solução:
+                \begin{displaymath}
+                    S_2 = 6 \cap [3; \infty[ \cap [0; 5] = \emptyset
+                \end{displaymath}
+                Portanto, temos que as soluções para $g(x) = 4$ são:
+                \begin{displaymath}
+                    S_1 \cup S_2 \implies 2 \cup \emptyset = 2
+                \end{displaymath}
+            \end{enumerate}
+        \item Se $g(x) < 3$:
+            
+        \end{enumerate}
+\end{enumerate}
 
 \section{To Be Continued...}
 \end{document}
