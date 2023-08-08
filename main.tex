@@ -15,6 +15,7 @@
 
 \maketitle
 \tableofcontents
+\newpage
 \section{Introdução}
 \par
 Diferente das outras ciências, na matemática não é a \emph{experiência} que prova seus fatos, mas sim a \textbf{lógica e dedução}.
@@ -57,7 +58,7 @@ Mas o que se tem hoje em dia? Bem, os matemáticos utilizam o sistema axiomátic
 
 \subsection{Matemática Discreta}
 "Tá, mas onde você quis chegar com toda essa introdução e contextualização? Cadê a matemática discreta?". Bem, aqui estamos: a matemática discreta é uma área da matemática que trata acerca das \textbf{estruturas matemáticas que são finitas e/ou podem ser enumeradas}; um bom exemplo disso são os números naturais. Ela apresenta métodos de resolução diversos e utiliza constantemente do \emph{raciocínio matemático}.
-
+\newpage
 \section{Lógica}
 
 A \emph{lógica matemática} tem como base a \textbf{veracidade de uma proposição}, de modo a determinar se uma afirmação matemática é verdadeira ou falsa; às afirmações verdadeiras damos o nome de \textbf{teoremas}. Por exemplo, você provavelmente sabe que "a razão entre o perímetro e o diâmetro de uma circunferência é sempre $\pi$'". 
@@ -120,7 +121,7 @@ Com base nessas definições, vamos analisar as seguintes proposições e, depoi
     \item \emph{"Todo número inteiro par, maior ou igual a 4, é resultado da soma de dois números primos"}: essa afirmação é uma \textbf{Conjectura}; não se sabe de nenhum contraexemplo até o presente momento, mas também é algo que não se pode provar de maneira abstrata pelas proposições acima nem outras.
 \end{enumerate}
 Pode ter sido muita informação por agora, mas isso é algo que a gente se acostuma com o tempo. De toda forma, vamos dar uma olhada na "linguagem da lógica", que nos permitiu fazer todas essas operações.
-
+\newpage
 \section{Linguagem e Lógica}
 Como notado e utilizado, a linguagem matemática deve ser muito precisa e todos os seus termos, declarados. A partir daqui, devemos observar com mais aprofundamento os aspectos da linguagem matemática, mais precisamente como sua lógica é construída.
 \subsection{Princípios básicos da proposição}
@@ -324,7 +325,7 @@ Analisemos o seguinte caso: \emph{"A soma de dois números ímpares $x$ e $y$ é
     \end{align*}
     Perceba que ambos os lados da desigualdade são múltiplos de 2, portanto, pares, gerando uma contradição com $x + y = a$. Assim, a proposição inicial é verdadeira. \footnote{Devo verificar se isso está totalmente coerente.}
 \end{itemize}
-
+\newpage
 \section{Introdução à teoria dos Conjuntos}
 A definição de \emph{conjunto} é algo abstrato, que não é necessariamente preciso muitas vezes; portanto, para este estudo, diremos que \emph{um conjunto é definido somente por seus elementos}. A partir disso podemos fazer a pergunta: "dado um conjunto $A$ e um elemento $x$, $x$ pertence a $A$?"
 \par
@@ -574,6 +575,7 @@ Existem algumas possibilidades, como $[a, b[$, $] - \infty, b] $ e outras. \\ No
         \end{itemize}
     \end{enumerate}
 \end{enumerate}
+\newpage
 
 \section{Operações Básicas}
 Definem-se 2 operações fundamentais na matemática a partir da teoria dos conjuntos numéricos: a \emph{adição} e \emph{multiplicação}. Delas, advém a \emph{subtração}, onde a diferença $x - y$ pode ser vista como $x + (-y)$, e a \emph{divisão}, pois a divisão de $\frac{z}{w}$ pode ser entendida também como $z \cdot \frac{1}{w}$.
@@ -596,6 +598,7 @@ Definem-se 2 operações fundamentais na matemática a partir da teoria dos conj
 \end{enumerate}
 
 \emph{Observação}: não é correto dizer, por exemplo, que $\sqrt{4} = \pm 2$, pois essa expressão não responde qual é a raiz de 4, mas sim quais os valores que, quando elevados a 2, resultam em 4 (2 e -2).  Portanto, prefira utilizar $\sqrt{4} = 2$.
+\newpage
 
 \section{Equações e Inequações}
 Equações e inequações são ferramentas matemáticas poderosas e básicas de encontrar valores de incógnitas que tornem uma proposição verdadeira. 
@@ -648,7 +651,7 @@ qual o valor de $X$? \\
 \subsection{Inequações de 1º Grau}
 
 \subsection{Inequações de 2º Grau}
-
+\newpage
 \section{Funções}
 \textbf{Definição de Função}: função é uma \emph{relação binária} $f: X \rightarrow Y$ ($f$ de $X$ em $Y$) de um conjunto $X$ (\textbf{domínio}) com um conjunto $Y$ (\textbf{contra-domínio}), onde existem $x \in X, y \in Y$ e podemos associar o objeto $x$ ao $y$ através da função $f$, de notação $f(x) = y$. \\
 \textbf{Definição de Imagem}: denominamos de \textbf{Imagem} os conjuntos abaixo:
@@ -1208,9 +1211,77 @@ de formação dada (indicando domínio e contradomínio). Verifique se é injeti
                 \end{displaymath}
             \end{enumerate}
         \item Se $g(x) < 3$:
-            
         \end{enumerate}
+    \item \enquote{Considere a função $f: \mathbb{N}^* \rightarrow \mathbb{Z}$ tal que}
+    \begin{align*}
+         f(n) = \left\{
+                \begin{aligned}
+                    \frac{-n}{2} &; \quad \text{se $n$ é par} \\
+                    \frac{n - 1}{2} &; \quad \text{se $n$ é ímpar}
+                \end{aligned}
+                \right.
+    \end{align*}
+    \enquote{Mostre que $f$ é bijetiva.} \\
+        \emph{Resolução}: Devemos mostrar que $f$ é injetiva e sobrejetiva para todos os casos. Começamos com a injetividade para:
+        \begin{itemize}
+            \item Se $n$ é par: \\
+            Sejam $n_1, n_2 \in \mathbb{N}^*$ e ambos pares. Temos:
+            \begin{align*}
+                f(n_1) = f(n_2) &\implies \frac{-n_1}{2} = \frac{-n_2}{2} \quad \cdot 2 \\ &\implies
+                (-n_1) = (-n_2) \quad \cdot (-1) \\ &\implies
+                n_1 = n_2
+            \end{align*}
+            \item Se $n$ é ímpar: \\
+            Sejam $n_3, n_4 \in \mathbb{N}^*$ e ambos ímpares. Temos:
+            \begin{align*}
+                f(n_3) = f(n_4) &\implies \frac{n_3 - 1}{2} = \frac{n_4 - 1}{2} \quad \cdot 2 \\ &\implies
+                n_3 - 1 = n_4 - 1 \quad +1 \\ &\implies 
+                n_3 = n_4
+            \end{align*}
+            \item Se um elemento é ímpar e outro par: \\
+            Sejam $n_5, n_6 \in \mathbb{N}^*$, onde $n_5$ é ímpar e $n_6$ é par. Com $n_5 \ne n_6$, temos:
+            \begin{align*}
+                n_5 \ne n_6 &\implies f(n_5) \ne f(n_6) \\ &\implies
+                \frac{n_5 - 1}{2} \ne \frac{-n_6}{2} \\ &\implies
+                n_5 - 1 \ne -n_6
+            \end{align*}
+        \end{itemize}
+        Assim, está provada a injetividade da função $f$. Vejamos a sobrejetividade\footnote{Para provar a sobrejetividade, tente partir de um elemento do contradomínio de forma que você chegue a um elemento do domínio, como numa \enquote{lei de associação inversa}}:
+        \begin{itemize}
+            \item Se $n$ é par: \\
+            Note que, não coincidentemente, quando executada sobre os números pares a função $f$ gera um inteiro negativo; por exemplo, $f(2) = -1$, $f(4) = -2$, ... \\
+            Logo, seja $y \in \mathbb{N}^*, (-2y) \in \mathbb{Z}$, tal que $y$ é par. Portanto, ao aplicar a função sobre $(-2y)$:
+            \begin{displaymath}
+                f(-2y) = \frac{-(-2y)}{2} \implies f(-2y) = y
+            \end{displaymath}
+            \item Se $n$ é ímpar: \\
+            Note que executando a função $f$ sobre os números impares naturais, temos somente números inteiros não-negativos, como $f(1) = 0, f(3) = 1, f(5) = 2$, ... \\
+            Logo, seja $z \in \mathbb{N}^*$ e $(2z + 1) \in \mathbb{Z}$, tal que $z$ é ímpar. Assim, temos:
+            \begin{displaymath}
+                f(2z + 1) = \frac{(2z + 1) - 1}{2} \implies f(2z + 1) = z
+            \end{displaymath}
+        \end{itemize}
+        Portanto, está provada a sobrejetividade para ambos os casos de $n$.
+    \item \enquote{Considere a função $f: \mathbb{R}^* \rightarrow \mathbb{R}^*_+$ tal que $f(x) = \frac{1}{1 + x^2}$. Responda as seguintes perguntas apresentando as respectivas justificativas:}
+    \begin{enumerate}
+        \item \enquote{$f$ é injetiva}? \\
+        \textbf{Não}. Tomando $x_1 = 1, x_2 = (-1)$, temos:
+        \begin{align*}
+            x_1 \ne x_2 &\implies f(x_1) \ne f(x_2) \\ &\implies 
+            \frac{1}{1 + 1^2} \ne \frac{1}{1 + (-1)^2} \\ &\implies
+            \frac{1}{2} \ne \frac{1}{2}
+        \end{align*}
+        Contudo, tal conclusão é um absurdo e mostra que dois elementos diferentes podem gerar a mesma imagem. Portanto, a função $f$ não é injetiva.
+        \item \enquote{$f$ é sobrejetiva}? \\
+        \textbf{Não}. Note que, sendo $2 \in \mathbb{R}^*_+$, há algum elemento $x \in \mathbb{R}^*$ tal que:
+        \begin{align*}
+            f(x) = \frac{1}{1 + x^2} = 2 &\implies 2 = 1 + x^2 \\ &\implies
+            1 = x^2 \\ &\implies
+            x = |1|
+        \end{align*}
+        Contudo, como $x$ é um módulo, este pode ser um valor positivo (1) ou negativo (-1), o que o faz não pertencer ao domínio $\mathbb{R}^*$, gerando uma contradição. Logo, a função $f$ não é sobrejetiva.        
+    \end{enumerate}
 \end{enumerate}
-
+\newpage
 \section{To Be Continued...}
 \end{document}
